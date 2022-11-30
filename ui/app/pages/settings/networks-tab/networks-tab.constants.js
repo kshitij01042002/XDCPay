@@ -1,5 +1,14 @@
 const defaultNetworksData = [
   {
+    labelKey: 'xdcNetwork',
+    iconColor: '#29B6AF',
+    providerType: 'mainnet',
+    rpcUrl: 'https://rpc.xinfin.network/',
+    chainId: '50',
+    ticker: 'XDC',
+    blockExplorerUrl: 'https://blocksscan.io',
+  },
+  {
     labelKey: 'mainnet',
     iconColor: '#29B6AF',
     providerType: 'mainnet',

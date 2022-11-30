@@ -900,6 +900,9 @@
   "lockTimeTooGreat": {
     "message": "Lock time is too great"
   },
+  "xdcNetwork": {
+    "message": "XDC Network"
+  },
   "mainnet": {
     "message": "Main Ethereum Network"
   },
