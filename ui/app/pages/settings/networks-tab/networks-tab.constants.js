@@ -1,6 +1,6 @@
 const defaultNetworksData = [
   {
-    labelKey: 'xdcNetwork',
+    labelKey: 'xdc',
     iconColor: '#29B6AF',
     providerType: 'mainnet',
     rpcUrl: 'https://rpc.xinfin.network/',

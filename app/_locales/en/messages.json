@@ -900,7 +900,7 @@
   "lockTimeTooGreat": {
     "message": "Lock time is too great"
   },
-  "xdcNetwork": {
+  "xdc": {
     "message": "XDC Network"
   },
   "mainnet": {
