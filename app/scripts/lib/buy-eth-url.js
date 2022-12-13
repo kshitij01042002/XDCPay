@@ -26,10 +26,8 @@ export default function getBuyEthUrl ({ network, address, service }) {
       return 'https://www.rinkeby.io/'
     case 'kovan-faucet':
       return 'https://github.com/kovan-testnet/faucet'
-    case 'xdc':
-      return 'https://goerli-faucet.slock.it/'
     case 'xdcApothem':
-      return 'https://goerli-faucet.slock.it/'
+      return 'https://faucet.apothem.network/'
     default:
       throw new Error(`Unknown cryptocurrency exchange or faucet: "${service}"`)
   }

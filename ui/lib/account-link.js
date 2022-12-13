@@ -19,9 +19,9 @@ export default function getAccountLink (address, network, rpcPrefs) {
     case 5: // goerli test net
       return `https://goerli.etherscan.io/address/${address}`
     case 50: // xdc test net
-      return `https://xdc.etherscan.io/address/${address}`
+      return `https://xdc.blocksscan.io/address/${address}`
     case 51: // xdcApothem test net
-      return `https://xdcapothem.etherscan.io/address/${address}`
+      return `https://apothem.blocksscan.io/address/${address}`
     default:
       return ''
   }
