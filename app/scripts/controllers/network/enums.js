@@ -23,7 +23,7 @@ export const RINKEBY_CHAIN_ID = '0x4'
 export const GOERLI_CHAIN_ID = '0x5'
 export const KOVAN_CHAIN_ID = '0x2a'
 export const XDC_CHAIN_ID = '0x32'
-export const XDC_APOTHEM_CHAIN_ID = '0x32'
+export const XDC_APOTHEM_CHAIN_ID = '0x33'
 
 
 export const ROPSTEN_DISPLAY_NAME = 'Ropsten'
