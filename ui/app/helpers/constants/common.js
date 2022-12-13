@@ -11,6 +11,8 @@ export const NETWORK_TYPES = {
   RINKEBY: 'rinkeby',
   ROPSTEN: 'ropsten',
   GOERLI: 'goerli',
+  XDC: 'xdc',
+  XDC_APOTHEM: 'xdcApothem',
 }
 
 export const GAS_ESTIMATE_TYPES = {

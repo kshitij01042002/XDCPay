@@ -403,6 +403,12 @@
   "connectingToGoerli": {
     "message": "Connecting to Goerli Test Network"
   },
+  "connectingToXDC": {
+    "message": "Connecting to XDC Network Mainnet"
+  },
+  "connectingToXDCApothem": {
+    "message": "Connecting to XDC Testnet Apothem"
+  },
   "contacts": {
     "message": "Contacts"
   },
@@ -902,6 +908,9 @@
   },
   "xdc": {
     "message": "XDC Network"
+  },
+  "xdcApothem": {
+    "message": "XDC Testnet Apothem"
   },
   "mainnet": {
     "message": "Main Ethereum Network"

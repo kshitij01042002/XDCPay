@@ -66,7 +66,7 @@ describe('Network Dropdown', function () {
     })
 
     it('renders 7 DropDownMenuItems ', function () {
-      assert.equal(wrapper.find(DropdownMenuItem).length, 8)
+      assert.equal(wrapper.find(DropdownMenuItem).length, 9)
     })
 
     it('checks background color for first NetworkDropdownIcon', function () {
@@ -87,6 +87,14 @@ describe('Network Dropdown', function () {
 
     it('checks background color for fifth NetworkDropdownIcon', function () {
       assert.equal(wrapper.find(NetworkDropdownIcon).at(4).prop('backgroundColor'), '#3099f2') // Goerli Blue
+    })
+
+    it('checks background color for sixth NetworkDropdownIcon', function () {
+      assert.equal(wrapper.find(NetworkDropdownIcon).at(5).prop('backgroundColor'), '#7057ff') // XDC Blue
+    })
+
+    it('checks background color for seventh NetworkDropdownIcon', function () {
+      assert.equal(wrapper.find(NetworkDropdownIcon).at(6).prop('backgroundColor'), '#3099f2') // XDC Apothem Blue
     })
 
     it('checks background color for sixth NetworkDropdownIcon', function () {

@@ -7,6 +7,8 @@ import {
   RINKEBY_NETWORK_ID,
   KOVAN_NETWORK_ID,
   GOERLI_NETWORK_ID,
+  XDC_NETWORK_ID,
+  XDC_APOTHEM_NETWORK_ID,
 } from '../../../../../app/scripts/controllers/network/enums'
 
 const networkIdToTypeMap = {
@@ -14,6 +16,8 @@ const networkIdToTypeMap = {
   [ROPSTEN_NETWORK_ID]: 'ropsten',
   [RINKEBY_NETWORK_ID]: 'rinkeby',
   [GOERLI_NETWORK_ID]: 'goerli',
+  [XDC_NETWORK_ID]: 'xdc',
+  [XDC_APOTHEM_NETWORK_ID]: 'xdcApothem',
   [KOVAN_NETWORK_ID]: 'kovan',
 }
 

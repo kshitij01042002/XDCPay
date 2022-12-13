@@ -4,6 +4,7 @@ export const KOVAN = 'kovan'
 export const MAINNET = 'mainnet'
 export const GOERLI = 'goerli'
 export const XDC = 'xdc'
+export const XDC_APOTHEM = 'xdcApothem'
 
 export const LOCALHOST = 'localhost'
 
@@ -13,6 +14,7 @@ export const RINKEBY_NETWORK_ID = '4'
 export const GOERLI_NETWORK_ID = '5'
 export const KOVAN_NETWORK_ID = '42'
 export const XDC_NETWORK_ID = '50'
+export const XDC_APOTHEM_NETWORK_ID = '51'
 
 
 export const MAINNET_CHAIN_ID = '0x1'
@@ -21,6 +23,7 @@ export const RINKEBY_CHAIN_ID = '0x4'
 export const GOERLI_CHAIN_ID = '0x5'
 export const KOVAN_CHAIN_ID = '0x2a'
 export const XDC_CHAIN_ID = '0x32'
+export const XDC_APOTHEM_CHAIN_ID = '0x32'
 
 
 export const ROPSTEN_DISPLAY_NAME = 'Ropsten'
@@ -29,6 +32,7 @@ export const KOVAN_DISPLAY_NAME = 'Kovan'
 export const MAINNET_DISPLAY_NAME = 'Main Ethereum Network'
 export const GOERLI_DISPLAY_NAME = 'Goerli'
 export const XDC_DISPLAY_NAME = 'XDC Network'
+export const XDC_APOTHEM_DISPLAY_NAME = 'XDC APOTHEM Network'
 
 
 export const INFURA_PROVIDER_TYPES = [
@@ -37,7 +41,8 @@ export const INFURA_PROVIDER_TYPES = [
   KOVAN,
   MAINNET,
   GOERLI,
-  XDC
+  XDC,
+  XDC_APOTHEM
 ]
 
 export const NETWORK_TYPE_TO_ID_MAP = {
@@ -46,6 +51,7 @@ export const NETWORK_TYPE_TO_ID_MAP = {
   [KOVAN]: { networkId: KOVAN_NETWORK_ID, chainId: KOVAN_CHAIN_ID },
   [GOERLI]: { networkId: GOERLI_NETWORK_ID, chainId: GOERLI_CHAIN_ID },
   [XDC]: { networkId: XDC_NETWORK_ID, chainId: XDC_CHAIN_ID },
+  [XDC_APOTHEM]: { networkId: XDC_APOTHEM_NETWORK_ID, chainId: XDC_APOTHEM_CHAIN_ID },
 
   [MAINNET]: { networkId: MAINNET_NETWORK_ID, chainId: MAINNET_CHAIN_ID },
 }
@@ -57,6 +63,7 @@ export const NETWORK_TO_NAME_MAP = {
   [MAINNET]: MAINNET_DISPLAY_NAME,
   [GOERLI]: GOERLI_DISPLAY_NAME,
   [XDC]: XDC_DISPLAY_NAME,
+  [XDC_APOTHEM]: XDC_APOTHEM_DISPLAY_NAME,
 
 
   [ROPSTEN_NETWORK_ID]: ROPSTEN_DISPLAY_NAME,
@@ -65,6 +72,7 @@ export const NETWORK_TO_NAME_MAP = {
   [GOERLI_NETWORK_ID]: GOERLI_DISPLAY_NAME,
   [MAINNET_NETWORK_ID]: MAINNET_DISPLAY_NAME,
   [XDC_NETWORK_ID]: XDC_DISPLAY_NAME,
+  [XDC_APOTHEM_NETWORK_ID]: XDC_APOTHEM_DISPLAY_NAME,
 
 
   [ROPSTEN_CHAIN_ID]: ROPSTEN_DISPLAY_NAME,
@@ -72,6 +80,6 @@ export const NETWORK_TO_NAME_MAP = {
   [KOVAN_CHAIN_ID]: KOVAN_DISPLAY_NAME,
   [GOERLI_CHAIN_ID]: GOERLI_DISPLAY_NAME,
   [XDC_CHAIN_ID]: XDC_DISPLAY_NAME,
-
+  [XDC_APOTHEM_CHAIN_ID]: XDC_APOTHEM_DISPLAY_NAME,
   [MAINNET_CHAIN_ID]: MAINNET_DISPLAY_NAME,
 }

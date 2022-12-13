@@ -16,6 +16,10 @@ export function getEtherscanNetworkPrefix (networkId) {
       return 'kovan.'
     case networkEnums.GOERLI_NETWORK_ID:
       return 'goerli.'
+    case networkEnums.XDC_NETWORK_ID:
+      return 'xdc.'
+    case networkEnums.XDC_APOTHEM_NETWORK_ID:
+      return 'xdcApothem.'
     default: // also covers mainnet
       return ''
   }

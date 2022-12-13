@@ -30,6 +30,14 @@
     &--goerli {
       background-color: lighten($dodger-blue, 35%);
     }
+
+    &--xdc {
+      background-color: lighten($dodger-blue, 35%);
+    }
+    
+    &--xdcApothem {
+      background-color: lighten($dodger-blue, 35%);
+    }
   }
 
   &__name {
@@ -59,6 +67,14 @@
     }
 
     &--goerli {
+      background-color: $dodger-blue;
+    }
+
+    &--xdc {
+      background-color: $dodger-blue;
+    }
+
+    &--xdcApothem {
       background-color: $dodger-blue;
     }
   }

@@ -255,9 +255,11 @@ export function isEthereumNetwork (state) {
     RINKEBY,
     ROPSTEN,
     GOERLI,
+    XDC,
+    XDC_APOTHEM,
   } = NETWORK_TYPES
 
-  return [KOVAN, MAINNET, RINKEBY, ROPSTEN, GOERLI].includes(networkType)
+  return [KOVAN, MAINNET, RINKEBY, ROPSTEN, GOERLI, XD, XDC_APOTHEM].includes(networkType)
 }
 
 export function getPreferences ({ metamask }) {

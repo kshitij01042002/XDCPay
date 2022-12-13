@@ -17,6 +17,8 @@ import {
   MAINNET,
   LOCALHOST,
   INFURA_PROVIDER_TYPES,
+  XDC,
+  XDC_APOTHEM,
 } from './enums'
 
 const networks = { networkList: {} }
