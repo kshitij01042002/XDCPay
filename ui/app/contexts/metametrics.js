@@ -56,6 +56,7 @@ export function MetaMetricsProvider ({ children }) {
   }, [history])
 
   const metricsEvent = useCallback((config = {}, overrides = {}) => {
+    debugger
     const { eventOpts = {} } = config
     const { name = '' } = eventOpts
     const { currentPath: overrideCurrentPath = '' } = overrides

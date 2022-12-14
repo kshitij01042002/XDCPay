@@ -41,8 +41,6 @@ export const INFURA_PROVIDER_TYPES = [
   KOVAN,
   MAINNET,
   GOERLI,
-  XDC,
-  XDC_APOTHEM
 ]
 
 export const NETWORK_TYPE_TO_ID_MAP = {

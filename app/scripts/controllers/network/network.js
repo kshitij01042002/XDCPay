@@ -171,10 +171,12 @@ export default class NetworkController extends EventEmitter {
   _switchNetwork (opts) {
     this.setNetworkState('loading')
     this._configureProvider(opts)
+    console.log('===========', opts)
     this.emit('networkDidChange', opts.type)
   }
 
   _configureProvider (opts) {
+    debugger
     const { type, rpcTarget, chainId, ticker, nickname } = opts
     // infura type-based endpoints
     const isInfura = INFURA_PROVIDER_TYPES.includes(type)
@@ -186,6 +188,10 @@ export default class NetworkController extends EventEmitter {
     // url-based rpc endpoints
     } else if (type === 'rpc') {
       this._configureStandardProvider({ rpcUrl: rpcTarget, chainId, ticker, nickname })
+    } else if (type === 'xdc') {
+      this._configureStandardProvider({ rpcUrl: 'https://erpc.xinfin.network', chainId, ticker, nickname })
+    } else if (type === 'xdcApothem') {
+      this._configureStandardProvider({ rpcUrl: 'https://erpc.apothem.network', chainId, ticker, nickname })
     } else {
       throw new Error(`NetworkController - _configureProvider - unknown type "${type}"`)
     }
