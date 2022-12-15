@@ -17,8 +17,7 @@ import {
   MAINNET,
   LOCALHOST,
   INFURA_PROVIDER_TYPES,
-  XDC,
-  XDC_APOTHEM,
+  RPC_PROVIDER_TYPES
 } from './enums'
 
 const networks = { networkList: {} }
@@ -146,7 +145,7 @@ export default class NetworkController extends EventEmitter {
 
   async setProviderType (type, rpcTarget = '', ticker = 'ETH', nickname = '') {
     assert.notEqual(type, 'rpc', `NetworkController - cannot call "setProviderType" with type 'rpc'. use "setRpcTarget"`)
-    assert(INFURA_PROVIDER_TYPES.includes(type) || type === LOCALHOST, `NetworkController - Unknown rpc type "${type}"`)
+    assert(INFURA_PROVIDER_TYPES.includes(type) || type === LOCALHOST || RPC_PROVIDER_TYPES.includes(type), `NetworkController - Unknown rpc type "${type}"`)
     const providerConfig = { type, rpcTarget, ticker, nickname }
     this.providerConfig = providerConfig
   }
@@ -171,12 +170,10 @@ export default class NetworkController extends EventEmitter {
   _switchNetwork (opts) {
     this.setNetworkState('loading')
     this._configureProvider(opts)
-    console.log('===========', opts)
     this.emit('networkDidChange', opts.type)
   }
 
   _configureProvider (opts) {
-    debugger
     const { type, rpcTarget, chainId, ticker, nickname } = opts
     // infura type-based endpoints
     const isInfura = INFURA_PROVIDER_TYPES.includes(type)

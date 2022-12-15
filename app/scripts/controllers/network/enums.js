@@ -40,7 +40,12 @@ export const INFURA_PROVIDER_TYPES = [
   RINKEBY,
   KOVAN,
   MAINNET,
-  GOERLI,
+  GOERLI
+]
+
+export const RPC_PROVIDER_TYPES = [
+  XDC,
+  XDC_APOTHEM
 ]
 
 export const NETWORK_TYPE_TO_ID_MAP = {

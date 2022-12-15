@@ -1,14 +1,5 @@
 const defaultNetworksData = [
-  {
-    labelKey: 'xdc',
-    iconColor: '#29B6AF',
-    providerType: 'mainnet',
-    rpcUrl: 'https://rpc.xinfin.network/',
-    chainId: '50',
-    ticker: 'XDC',
-    blockExplorerUrl: 'https://blocksscan.io',
-  },
-  {
+   {
     labelKey: 'mainnet',
     iconColor: '#29B6AF',
     providerType: 'mainnet',
@@ -60,6 +51,24 @@ const defaultNetworksData = [
     providerType: 'localhost',
     rpcUrl: 'http://localhost:8545/',
     blockExplorerUrl: 'https://etherscan.io',
+  },
+  {
+    labelKey: 'xdc',
+    iconColor: '#29B6AF',
+    providerType: 'xdc',
+    rpcUrl: 'https://erpc.xinfin.network/',
+    chainId: '50',
+    ticker: 'XDC',
+    blockExplorerUrl: 'https://xdc.blocksscan.io',
+  },
+  {
+    labelKey: 'xdcApothem',
+    iconColor: '#29B6AF',
+    providerType: 'xdcApothem',
+    rpcUrl: 'https://erpc.apothem.network/',
+    chainId: '51',
+    ticker: 'XDC',
+    blockExplorerUrl: 'https://apothem.blocksscan.io',
   },
 ]
 
