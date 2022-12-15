@@ -248,7 +248,7 @@ class NetworkDropdown extends Component {
             {this.context.t('defaultNetwork')}
           </div>
         </div>
-        <DropdownMenuItem
+        {/* <DropdownMenuItem
           key="main"
           closeMenu={() => this.props.hideNetworkDropdown()}
           onClick={() => this.handleClick('mainnet')}
@@ -385,7 +385,7 @@ class NetworkDropdown extends Component {
           >
             {this.context.t('localhost')}
           </span>
-        </DropdownMenuItem>
+        </DropdownMenuItem> */}
         <DropdownMenuItem
           key="main"
           closeMenu={() => this.props.hideNetworkDropdown()}
