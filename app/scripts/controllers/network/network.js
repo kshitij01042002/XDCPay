@@ -14,7 +14,7 @@ import createLocalhostClient from './createLocalhostClient'
 
 import {
   RINKEBY,
-  MAINNET,
+  XDC,
   LOCALHOST,
   INFURA_PROVIDER_TYPES,
   RPC_PROVIDER_TYPES
@@ -31,7 +31,7 @@ if (process.env.IN_TEST === 'true') {
 } else if (METAMASK_DEBUG || env === 'test') {
   defaultProviderConfigType = RINKEBY
 } else {
-  defaultProviderConfigType = MAINNET
+  defaultProviderConfigType = XDC
 }
 
 const defaultProviderConfig = {
