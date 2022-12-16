@@ -17,7 +17,9 @@ import {
   XDC,
   LOCALHOST,
   INFURA_PROVIDER_TYPES,
-  RPC_PROVIDER_TYPES
+  RPC_PROVIDER_TYPES,
+  XDC_DISPLAY_NAME,
+  XDC_APOTHEM_DISPLAY_NAME
 } from './enums'
 
 const networks = { networkList: {} }
@@ -39,7 +41,7 @@ const defaultProviderConfig = {
 }
 
 const defaultNetworkConfig = {
-  ticker: 'ETH',
+  ticker: 'XDC',
 }
 
 export default class NetworkController extends EventEmitter {
@@ -65,7 +67,8 @@ export default class NetworkController extends EventEmitter {
 
   initializeProvider (providerParams) {
     this._baseProviderParams = providerParams
-    const { type, rpcTarget, chainId, ticker, nickname } = this.providerStore.getState()
+    let { type, rpcTarget, chainId, ticker, nickname } = this.providerStore.getState()
+
     this._configureProvider({ type, rpcTarget, chainId, ticker, nickname })
     this.lookupNetwork()
   }
@@ -131,7 +134,7 @@ export default class NetworkController extends EventEmitter {
     })
   }
 
-  setRpcTarget (rpcTarget, chainId, ticker = 'ETH', nickname = '', rpcPrefs) {
+  setRpcTarget (rpcTarget, chainId, ticker = 'XDC', nickname = '', rpcPrefs) {
     const providerConfig = {
       type: 'rpc',
       rpcTarget,
@@ -143,7 +146,7 @@ export default class NetworkController extends EventEmitter {
     this.providerConfig = providerConfig
   }
 
-  async setProviderType (type, rpcTarget = '', ticker = 'ETH', nickname = '') {
+  async setProviderType (type, rpcTarget = '', ticker = 'XDC', nickname = '') {
     assert.notEqual(type, 'rpc', `NetworkController - cannot call "setProviderType" with type 'rpc'. use "setRpcTarget"`)
     assert(INFURA_PROVIDER_TYPES.includes(type) || type === LOCALHOST || RPC_PROVIDER_TYPES.includes(type), `NetworkController - Unknown rpc type "${type}"`)
     const providerConfig = { type, rpcTarget, ticker, nickname }
@@ -174,7 +177,7 @@ export default class NetworkController extends EventEmitter {
   }
 
   _configureProvider (opts) {
-    const { type, rpcTarget, chainId, ticker, nickname } = opts
+    let { type, rpcTarget, chainId, ticker, nickname } = opts
     // infura type-based endpoints
     const isInfura = INFURA_PROVIDER_TYPES.includes(type)
     if (isInfura) {
@@ -186,9 +189,9 @@ export default class NetworkController extends EventEmitter {
     } else if (type === 'rpc') {
       this._configureStandardProvider({ rpcUrl: rpcTarget, chainId, ticker, nickname })
     } else if (type === 'xdc') {
-      this._configureStandardProvider({ rpcUrl: 'https://erpc.xinfin.network', chainId, ticker, nickname })
+      this._configureStandardProvider({ rpcUrl: 'https://erpc.xinfin.network', chainId:50, ticker:XDC, nickname:XDC_DISPLAY_NAME })
     } else if (type === 'xdcApothem') {
-      this._configureStandardProvider({ rpcUrl: 'https://erpc.apothem.network', chainId, ticker, nickname })
+      this._configureStandardProvider({ rpcUrl: 'https://erpc.apothem.network', chainId:51, ticker:XDC, nickname:XDC_APOTHEM_DISPLAY_NAME })
     } else {
       throw new Error(`NetworkController - _configureProvider - unknown type "${type}"`)
     }
@@ -202,7 +205,7 @@ export default class NetworkController extends EventEmitter {
     this._setNetworkClient(networkClient)
     // setup networkConfig
     const settings = {
-      ticker: 'ETH',
+      ticker: 'XDC',
     }
     this.networkConfig.putState(settings)
   }
@@ -220,7 +223,7 @@ export default class NetworkController extends EventEmitter {
     networks.networkList.rpc = {
       chainId,
       rpcUrl,
-      ticker: ticker || 'ETH',
+      ticker: ticker || 'XDC',
       nickname,
     }
     // setup networkConfig
