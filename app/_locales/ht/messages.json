@@ -212,7 +212,7 @@
     "message": "Mete modpas pou kontinye"
   },
   "etherscanView": {
-    "message": "Gade kont sou Etherscan"
+    "message": "Gade kont sou Blocksscan"
   },
   "expandView": {
     "message": "Elaji Wè"
@@ -776,7 +776,7 @@
     "message": "Wè Kont"
   },
   "viewOnEtherscan": {
-    "message": "Wè sou Etherscan"
+    "message": "Wè sou Blocksscan"
   },
   "visitWebSite": {
     "message": "Vizite sit entènèt nou an"

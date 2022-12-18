@@ -408,7 +408,7 @@
     "message": "Публічна адреса Ethereum"
   },
   "etherscanView": {
-    "message": "Переглянути обліковий запис на Etherscan"
+    "message": "Переглянути обліковий запис на Blocksscan"
   },
   "estimatedProcessingTimes": {
     "message": "Приблизні часи обробки"
@@ -1272,7 +1272,7 @@
     "message": "Дивитись на $1"
   },
   "viewOnEtherscan": {
-    "message": "Дивитись на Etherscan"
+    "message": "Дивитись на Blocksscan"
   },
   "visitWebSite": {
     "message": "Відвідайте наш веб-сайт"

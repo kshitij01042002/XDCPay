@@ -479,7 +479,7 @@
     "message": "アカウントを見る"
   },
   "viewOnEtherscan": {
-    "message": "Etherscan で見る"
+    "message": "Blocksscan で見る"
   },
   "walletSeed": {
     "message": "ウォレットのパスフレーズ"

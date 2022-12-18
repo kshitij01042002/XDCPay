@@ -396,7 +396,7 @@
     "message": "Alamat Awam Ethereum"
   },
   "etherscanView": {
-    "message": "Lihat akaun di Etherscan"
+    "message": "Lihat akaun di Blocksscan"
   },
   "estimatedProcessingTimes": {
     "message": "Masa Pemprosesan yang Dijangka"
@@ -1243,7 +1243,7 @@
     "message": "Lihat pada $1"
   },
   "viewOnEtherscan": {
-    "message": "Lihat di Etherscan"
+    "message": "Lihat di Blocksscan"
   },
   "visitWebSite": {
     "message": "Kunjungi laman web kami"

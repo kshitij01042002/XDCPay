@@ -68,7 +68,7 @@
     "message": "Show Incoming Transactions"
   },
   "showIncomingTransactionsDescription": {
-    "message": "Select this to use Etherscan to show incoming transactions in the transactions list"
+    "message": "Select this to use Blocksscan to show incoming transactions in the transactions list"
   },
   "chartOnlyAvailableEth": {
     "message": "Chart only available on Ethereum networks."
@@ -635,7 +635,7 @@
     "message": "Ethereum Public Address"
   },
   "etherscanView": {
-    "message": "View account on Etherscan"
+    "message": "View account on Blocksscan"
   },
   "estimatedProcessingTimes": {
     "message": "Estimated Processing Times"
@@ -1699,7 +1699,7 @@
     "message": "View at $1"
   },
   "viewOnEtherscan": {
-    "message": "View on Etherscan"
+    "message": "View on Blocksscan"
   },
   "retryTransaction": {
     "message": "Retry Transaction"

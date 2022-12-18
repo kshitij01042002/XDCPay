@@ -12,8 +12,10 @@ import { useI18nContext } from '../../../hooks/useI18nContext'
 import { useMetricEvent } from '../../../hooks/useMetricEvent'
 import { getEnvironmentType } from '../../../../../app/scripts/lib/util'
 import { ENVIRONMENT_TYPE_FULLSCREEN } from '../../../../../app/scripts/lib/enums'
+import usePrefix from '../../../hooks/usePrefix'
 
 export default function AccountOptionsMenu ({ anchorElement, onClose }) {
+  const {getXDCAddress} = usePrefix()
   const t = useI18nContext()
   const dispatch = useDispatch()
   const history = useHistory()
@@ -35,7 +37,7 @@ export default function AccountOptionsMenu ({ anchorElement, onClose }) {
     eventOpts: {
       category: 'Navigation',
       action: 'Account Options',
-      name: 'Clicked View on Etherscan',
+      name: 'Clicked View on Blocksscan',
     },
   })
   const openConnectedSitesEvent = useMetricEvent({
@@ -90,7 +92,7 @@ export default function AccountOptionsMenu ({ anchorElement, onClose }) {
       <MenuItem
         onClick={() => {
           viewOnEtherscanEvent()
-          global.platform.openTab({ url: getAccountLink(address, network, rpcPrefs) })
+          global.platform.openTab({ url: getAccountLink(getXDCAddress(address), network, rpcPrefs) })
           onClose()
         }}
         subtitle={

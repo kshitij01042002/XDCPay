@@ -405,7 +405,7 @@
     "message": "以太坊公開位址"
   },
   "etherscanView": {
-    "message": "在 Etherscan 上查看帳戶"
+    "message": "在 Blocksscan 上查看帳戶"
   },
   "estimatedProcessingTimes": {
     "message": "預估處理時間"
@@ -1251,7 +1251,7 @@
     "message": "在 $1 瀏覽"
   },
   "viewOnEtherscan": {
-    "message": "在 Etherscan 上瀏覽"
+    "message": "在 Blocksscan 上瀏覽"
   },
   "visitWebSite": {
     "message": "造訪我們的網站"

@@ -158,7 +158,7 @@
     "message": "Введите пароль"
   },
   "etherscanView": {
-    "message": "Просмотреть счет на Etherscan"
+    "message": "Просмотреть счет на Blocksscan"
   },
   "exportPrivateKey": {
     "message": "Экспортировать закрытый ключ"
@@ -1293,7 +1293,7 @@
     "message": "Посмотреть на $1"
   },
   "viewOnEtherscan": {
-    "message": "Посмотреть на Etherscan"
+    "message": "Посмотреть на Blocksscan"
   },
   "welcomeBack": {
     "message": "Рад видеть вас снова!"

@@ -393,7 +393,7 @@
     "message": "Öffentliche Ethereum-Adresse"
   },
   "etherscanView": {
-    "message": "Account auf Etherscan anschauen"
+    "message": "Account auf Blocksscan anschauen"
   },
   "estimatedProcessingTimes": {
     "message": "Geschätzte Bearbeitungszeiten"
@@ -1229,7 +1229,7 @@
     "message": "Für $1 ansehen"
   },
   "viewOnEtherscan": {
-    "message": "Auf Etherscan ansehen"
+    "message": "Auf Blocksscan ansehen"
   },
   "visitWebSite": {
     "message": "Gehe zu unserer Webseite"

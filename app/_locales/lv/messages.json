@@ -408,7 +408,7 @@
     "message": "Ethereum publiskā adrese"
   },
   "etherscanView": {
-    "message": "Skatīt kontu ar Etherscan"
+    "message": "Skatīt kontu ar Blocksscan"
   },
   "estimatedProcessingTimes": {
     "message": "Aprēķinātais apstrādes laiks"
@@ -1268,7 +1268,7 @@
     "message": "Skatīt $1"
   },
   "viewOnEtherscan": {
-    "message": "Skatīt Etherscan"
+    "message": "Skatīt Blocksscan"
   },
   "visitWebSite": {
     "message": "Apmeklējiet mūsu tīmekļa vietni"

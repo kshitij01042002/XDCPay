@@ -408,7 +408,7 @@
     "message": "Публичен адрес за етереум"
   },
   "etherscanView": {
-    "message": "Преглед на акаунта в Etherscan"
+    "message": "Преглед на акаунта в Blocksscan"
   },
   "estimatedProcessingTimes": {
     "message": "Приблизителни времена за обработка"
@@ -1268,7 +1268,7 @@
     "message": "Преглед на $1"
   },
   "viewOnEtherscan": {
-    "message": "Преглед на Etherscan"
+    "message": "Преглед на Blocksscan"
   },
   "visitWebSite": {
     "message": "Посетете нашият уеб сайт"

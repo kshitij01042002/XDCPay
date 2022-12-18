@@ -9,6 +9,7 @@ import PageContainer from '../../components/ui/page-container'
 import { Tabs, Tab } from '../../components/ui/tabs'
 import TokenList from './token-list'
 import TokenSearch from './token-search'
+import withPrefix from '../../hoc/withPrefix'
 
 const emptyAddr = '0x0000000000000000000000000000000000000000'
 
@@ -25,6 +26,8 @@ class AddToken extends Component {
     tokens: PropTypes.array,
     identities: PropTypes.object,
     mostRecentOverviewPage: PropTypes.string.isRequired,
+    get0xAddress: PropTypes.func,
+    getXDCAddress: PropTypes.func,
   }
 
   state = {
@@ -142,6 +145,7 @@ class AddToken extends Component {
   }
 
   handleCustomAddressChange (value) {
+    const { get0xAddress, getXDCAddress } = this.props
     const customAddress = value.trim()
     this.setState({
       customAddress,
@@ -150,8 +154,8 @@ class AddToken extends Component {
       autoFilled: false,
     })
 
-    const isValidAddress = ethUtil.isValidAddress(customAddress)
-    const standardAddress = ethUtil.addHexPrefix(customAddress).toLowerCase()
+    const isValidAddress = ethUtil.isValidAddress(get0xAddress(customAddress))
+    const standardAddress = ethUtil.addHexPrefix(get0xAddress(customAddress)).toLowerCase()
 
     switch (true) {
       case !isValidAddress:
@@ -164,21 +168,21 @@ class AddToken extends Component {
         })
 
         break
-      case Boolean(this.props.identities[standardAddress]):
+      case (Boolean(this.props.identities[get0xAddress(standardAddress)]) || Boolean(this.props.identities[getXDCAddress(standardAddress)])):
         this.setState({
           customAddressError: this.context.t('personalAddressDetected'),
         })
 
         break
-      case checkExistingAddresses(customAddress, this.props.tokens):
+      case checkExistingAddresses(get0xAddress(customAddress), this.props.tokens):
         this.setState({
           customAddressError: this.context.t('tokenAlreadyAdded'),
         })
 
         break
       default:
-        if (customAddress !== emptyAddr) {
-          this.attemptToAutoFillTokenParams(customAddress)
+        if (get0xAddress(customAddress) !== emptyAddr) {
+          this.attemptToAutoFillTokenParams(get0xAddress(customAddress))
         }
     }
   }
@@ -325,4 +329,4 @@ class AddToken extends Component {
   }
 }
 
-export default AddToken
+export default withPrefix(AddToken)

@@ -408,7 +408,7 @@
     "message": "ईथरअम पब्लिक एड्रेस"
   },
   "etherscanView": {
-    "message": "Etherscan पर खाता दिखाएँ"
+    "message": "Blocksscan पर खाता दिखाएँ"
   },
   "estimatedProcessingTimes": {
     "message": "प्रोसेस करने के अनुमानित समय"

@@ -396,7 +396,7 @@
     "message": "Adresse publique d'Ethereum"
   },
   "etherscanView": {
-    "message": "Afficher le compte sur Etherscan"
+    "message": "Afficher le compte sur Blocksscan"
   },
   "estimatedProcessingTimes": {
     "message": "Délais de traitement estimés"
@@ -1248,7 +1248,7 @@
     "message": "Afficher à $1"
   },
   "viewOnEtherscan": {
-    "message": "Voir sur Etherscan"
+    "message": "Voir sur Blocksscan"
   },
   "visitWebSite": {
     "message": "Visitez notre site web"

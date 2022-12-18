@@ -1,7 +1,7 @@
 import assert from 'assert'
 import { getEtherscanNetworkPrefix } from '../../../ui/lib/etherscan-prefix-for-network'
 
-describe('Etherscan Network Prefix', function () {
+describe('Blocksscan Network Prefix', function () {
 
   it('returns empty string as default value', function () {
     assert.equal(getEtherscanNetworkPrefix(), '')

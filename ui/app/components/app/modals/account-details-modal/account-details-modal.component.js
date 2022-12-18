@@ -5,8 +5,9 @@ import getAccountLink from '../../../../../lib/account-link'
 import QrView from '../../../ui/qr-code'
 import EditableLabel from '../../../ui/editable-label'
 import Button from '../../../ui/button'
+import withPrefix from '../../../../hoc/withPrefix'
 
-export default class AccountDetailsModal extends Component {
+class AccountDetailsModal extends Component {
   static propTypes = {
     selectedIdentity: PropTypes.object,
     network: PropTypes.string,
@@ -28,6 +29,7 @@ export default class AccountDetailsModal extends Component {
       setAccountLabel,
       keyrings,
       rpcPrefs,
+      getXDCAddress
     } = this.props
     const { name, address } = selectedIdentity
 
@@ -62,7 +64,7 @@ export default class AccountDetailsModal extends Component {
           type="secondary"
           className="account-details-modal__button"
           onClick={() => {
-            global.platform.openTab({ url: getAccountLink(address, network, rpcPrefs) })
+            global.platform.openTab({ url: getAccountLink(getXDCAddress(address), network, rpcPrefs) })
           }}
         >
           {rpcPrefs.blockExplorerUrl
@@ -87,3 +89,4 @@ export default class AccountDetailsModal extends Component {
     )
   }
 }
+export default withPrefix(AccountDetailsModal)

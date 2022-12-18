@@ -8,8 +8,9 @@ import { checksumAddress } from '../../../../helpers/utils/util'
 import ReadOnlyInput from '../../../ui/readonly-input'
 import Button from '../../../ui/button'
 import AccountModalContainer from '../account-modal-container'
+import withPrefix from '../../../../hoc/withPrefix'
 
-export default class ExportPrivateKeyModal extends Component {
+class ExportPrivateKeyModal extends Component {
   static contextTypes = {
     t: PropTypes.func,
   }
@@ -27,6 +28,7 @@ export default class ExportPrivateKeyModal extends Component {
     hideModal: PropTypes.func.isRequired,
     clearAccountDetails: PropTypes.func.isRequired,
     previousModalState: PropTypes.string,
+    getXDCAddress: PropTypes.func,
   }
 
   state = {
@@ -134,6 +136,7 @@ export default class ExportPrivateKeyModal extends Component {
       showAccountDetailModal,
       hideModal,
       previousModalState,
+      getXDCAddress
     } = this.props
     const { name, address } = selectedIdentity
 
@@ -152,7 +155,7 @@ export default class ExportPrivateKeyModal extends Component {
         <span className="export-private-key-modal__account-name">{name}</span>
         <ReadOnlyInput
           wrapperClass="ellip-address-wrapper"
-          value={checksumAddress(address)}
+          value={getXDCAddress(checksumAddress(address))}
         />
         <div className="export-private-key-modal__divider" />
         <span className="export-private-key-modal__body-title">{this.context.t('showPrivateKeys')}</span>
@@ -171,3 +174,4 @@ export default class ExportPrivateKeyModal extends Component {
     )
   }
 }
+export default withPrefix(ExportPrivateKeyModal)

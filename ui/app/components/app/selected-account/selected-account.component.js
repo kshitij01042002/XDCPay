@@ -4,6 +4,7 @@ import copyToClipboard from 'copy-to-clipboard'
 import { shortenAddress, checksumAddress } from '../../../helpers/utils/util'
 
 import Tooltip from '../../ui/tooltip'
+import withPrefix from '../../../hoc/withPrefix'
 
 class SelectedAccount extends Component {
   state = {
@@ -16,11 +17,12 @@ class SelectedAccount extends Component {
 
   static propTypes = {
     selectedIdentity: PropTypes.object.isRequired,
+    getXDCAddress: PropTypes.func,
   }
 
   render () {
     const { t } = this.context
-    const { selectedIdentity } = this.props
+    const { selectedIdentity, getXDCAddress } = this.props
     const checksummedAddress = checksumAddress(selectedIdentity.address)
 
     return (
@@ -35,14 +37,14 @@ class SelectedAccount extends Component {
             onClick={() => {
               this.setState({ copied: true })
               setTimeout(() => this.setState({ copied: false }), 3000)
-              copyToClipboard(checksummedAddress)
+              copyToClipboard(getXDCAddress(checksummedAddress))
             }}
           >
             <div className="selected-account__name">
               { selectedIdentity.name }
             </div>
             <div className="selected-account__address">
-              { shortenAddress(checksummedAddress) }
+              { shortenAddress(getXDCAddress(checksummedAddress)) }
             </div>
           </div>
         </Tooltip>
@@ -51,4 +53,4 @@ class SelectedAccount extends Component {
   }
 }
 
-export default SelectedAccount
+export default withPrefix(SelectedAccount)

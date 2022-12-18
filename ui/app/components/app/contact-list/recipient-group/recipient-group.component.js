@@ -3,12 +3,14 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Identicon from '../../../ui/identicon'
 import { ellipsify } from '../../../../pages/send/send.utils'
+import usePrefix from '../../../../hooks/usePrefix'
 
 function addressesEqual (address1, address2) {
   return String(address1).toLowerCase() === String(address2).toLowerCase()
 }
 
 export default function RecipientGroup ({ label, items, onSelect, selectedAddress }) {
+  const {getXDCAddress} = usePrefix()
   if (!items || !items.length) {
     return null
   }
@@ -33,12 +35,12 @@ export default function RecipientGroup ({ label, items, onSelect, selectedAddres
             <Identicon address={address} diameter={28} />
             <div className="send__select-recipient-wrapper__group-item__content">
               <div className="send__select-recipient-wrapper__group-item__title">
-                {name || ellipsify(address)}
+                {name || ellipsify(getXDCAddress(address))}
               </div>
               {
                 name && (
                   <div className="send__select-recipient-wrapper__group-item__subtitle">
-                    {ellipsify(address)}
+                    {ellipsify(getXDCAddress(address))}
                   </div>
                 )
               }
