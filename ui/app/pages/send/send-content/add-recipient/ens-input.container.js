@@ -6,17 +6,16 @@ import {
   getAddressBookEntry,
 } from '../../../../selectors'
 import EnsInput from './ens-input.component'
-import usePrefix from '../../../../hooks/usePrefix'
+import withPrefix from '../../../../hoc/withPrefix'
 
-export default connect(
+export default withPrefix(connect(
   (state) => {
     const selectedAddress = getSendTo(state)
-    const { getXDCAddress } = usePrefix()
     return {
       network: getCurrentNetwork(state),
-      selectedAddress: getXDCAddress(selectedAddress),
+      selectedAddress,
       selectedName: getSendToNickname(state),
       contact: getAddressBookEntry(state, selectedAddress),
     }
   },
-)(EnsInput)
+)(EnsInput))

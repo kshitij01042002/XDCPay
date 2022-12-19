@@ -32,6 +32,7 @@ export default class EnsInput extends Component {
     onReset: PropTypes.func,
     onValidAddressTyped: PropTypes.func,
     contact: PropTypes.object,
+    getXDCAddress: PropTypes.func,
   }
 
   state = {
@@ -137,7 +138,7 @@ export default class EnsInput extends Component {
 
   render () {
     const { t } = this.context
-    const { className, selectedAddress } = this.props
+    const { className, selectedAddress, getXDCAddress } = this.props
     const { input } = this.state
 
     if (selectedAddress) {
@@ -160,7 +161,7 @@ export default class EnsInput extends Component {
             placeholder={t('recipientAddressPlaceholder')}
             onChange={this.onChange}
             onPaste={this.onPaste}
-            value={selectedAddress || input}
+            value={getXDCAddress(selectedAddress) || input}
             autoFocus
             data-testid="ens-input"
           />
@@ -184,7 +185,7 @@ export default class EnsInput extends Component {
 
   renderSelected () {
     const { t } = this.context
-    const { className, selectedAddress, selectedName, contact = {} } = this.props
+    const { className, selectedAddress, selectedName, contact = {}, getXDCAddress } = this.props
     const name = contact.name || selectedName
 
     return (
@@ -199,9 +200,9 @@ export default class EnsInput extends Component {
             onChange={this.onChange}
           >
             <div className="ens-input__selected-input__title">
-              {name || ellipsify(selectedAddress)}
+              {name || ellipsify(getXDCAddress(selectedAddress))}
             </div>
-            { name && <div className="ens-input__selected-input__subtitle">{selectedAddress}</div> }
+            { name && <div className="ens-input__selected-input__subtitle">{getXDCAddress(selectedAddress)}</div> }
           </div>
           <div
             className="ens-input__wrapper__action-icon ens-input__wrapper__action-icon--erase"

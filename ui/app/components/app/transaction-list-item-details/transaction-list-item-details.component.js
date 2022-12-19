@@ -12,8 +12,9 @@ import Button from '../../ui/button'
 import Tooltip from '../../ui/tooltip'
 import Copy from '../../ui/icon/copy-icon.component'
 import Popover from '../../ui/popover'
+import withPrefix from '../../../hoc/withPrefix'
 
-export default class TransactionListItemDetails extends PureComponent {
+class TransactionListItemDetails extends PureComponent {
   static contextTypes = {
     t: PropTypes.func,
     metricsEvent: PropTypes.func,
@@ -41,6 +42,7 @@ export default class TransactionListItemDetails extends PureComponent {
     tryReverseResolveAddress: PropTypes.func.isRequired,
     senderNickname: PropTypes.string.isRequired,
     recipientNickname: PropTypes.string,
+    getXDCAddress: PropTypes.func,
   }
 
   state = {
@@ -75,7 +77,7 @@ export default class TransactionListItemDetails extends PureComponent {
   }
 
   handleCopyTxId = () => {
-    const { transactionGroup } = this.props
+    const { transactionGroup, getXDCAddress } = this.props
     const { primaryTransaction: transaction } = transactionGroup
     const { hash } = transaction
 
@@ -88,7 +90,7 @@ export default class TransactionListItemDetails extends PureComponent {
     })
 
     this.setState({ justCopied: true }, () => {
-      copyToClipboard(hash)
+      copyToClipboard(getXDCAddress(hash))
       setTimeout(() => this.setState({ justCopied: false }), 1000)
     })
   }
@@ -262,3 +264,4 @@ export default class TransactionListItemDetails extends PureComponent {
     )
   }
 }
+export default withPrefix(TransactionListItemDetails)

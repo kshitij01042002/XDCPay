@@ -28,6 +28,7 @@ import { useUserPreferencedCurrency } from './useUserPreferencedCurrency'
 import { useCurrencyDisplay } from './useCurrencyDisplay'
 import { useTokenDisplayValue } from './useTokenDisplayValue'
 import { useTokenData } from './useTokenData'
+import usePrefix from './usePrefix'
 
 /**
  * @typedef {Object} TransactionDisplayData
@@ -53,6 +54,7 @@ import { useTokenData } from './useTokenData'
  * @return {TransactionDisplayData}
  */
 export function useTransactionDisplayData (transactionGroup) {
+  const { getXDCAddress } = usePrefix()
   const knownTokens = useSelector(getTokens)
   const t = useI18nContext()
   const { initialTransaction, primaryTransaction } = transactionGroup
@@ -118,16 +120,16 @@ export function useTransactionDisplayData (transactionGroup) {
     category = TRANSACTION_CATEGORY_RECEIVE
     title = t('receive')
     prefix = ''
-    subtitle = t('fromAddress', [shortenAddress(senderAddress)])
+    subtitle = t('fromAddress', [shortenAddress(getXDCAddress(senderAddress))])
   } else if (transactionCategory === TOKEN_METHOD_TRANSFER_FROM || transactionCategory === TOKEN_METHOD_TRANSFER) {
     category = TRANSACTION_CATEGORY_SEND
     title = t('sendSpecifiedTokens', [token?.symbol || t('token')])
     recipientAddress = getTokenToAddress(tokenData.params)
-    subtitle = t('toAddress', [shortenAddress(recipientAddress)])
+    subtitle = t('toAddress', [shortenAddress(getXDCAddress(recipientAddress))])
   } else if (transactionCategory === SEND_ETHER_ACTION_KEY) {
     category = TRANSACTION_CATEGORY_SEND
     title = t('sendETH')
-    subtitle = t('toAddress', [shortenAddress(recipientAddress)])
+    subtitle = t('toAddress', [shortenAddress(getXDCAddress(recipientAddress))])
   }
 
   const primaryCurrencyPreferences = useUserPreferencedCurrency(PRIMARY)

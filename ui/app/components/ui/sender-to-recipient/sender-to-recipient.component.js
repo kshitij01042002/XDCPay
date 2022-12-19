@@ -8,6 +8,7 @@ import { checksumAddress, shortenAddress } from '../../../helpers/utils/util'
 import AccountMismatchWarning from '../account-mismatch-warning/account-mismatch-warning.component'
 import { useI18nContext } from '../../../hooks/useI18nContext'
 import { DEFAULT_VARIANT, CARDS_VARIANT, FLAT_VARIANT } from './sender-to-recipient.constants'
+import usePrefix from '../../../hooks/usePrefix'
 
 const variantHash = {
   [DEFAULT_VARIANT]: 'sender-to-recipient--default',
@@ -23,6 +24,7 @@ function SenderAddress ({
   senderAddress,
   warnUserOnAccountMismatch,
 }) {
+  const { getXDCAddress } = usePrefix()
   const t = useI18nContext()
   const [addressCopied, setAddressCopied] = useState(false)
   let tooltipHtml = <p>{t('copiedExclamation')}</p>
@@ -41,7 +43,7 @@ function SenderAddress ({
       className={classnames('sender-to-recipient__party sender-to-recipient__party--sender')}
       onClick={() => {
         setAddressCopied(true)
-        copyToClipboard(checksummedSenderAddress)
+        copyToClipboard(getXDCAddress(checksummedSenderAddress))
         if (onSenderClick) {
           onSenderClick()
         }
@@ -50,7 +52,7 @@ function SenderAddress ({
       {!addressOnly && (
         <div className="sender-to-recipient__sender-icon">
           <Identicon
-            address={checksumAddress(senderAddress)}
+            address={checksumAddress(getXDCAddress(senderAddress))}
             diameter={24}
           />
         </div>
@@ -65,7 +67,7 @@ function SenderAddress ({
         <div className="sender-to-recipient__name">
           {
             addressOnly
-              ? <span>{`${t('from')}: ${senderName || checksummedSenderAddress}`}</span>
+              ? <span>{`${t('from')}: ${senderName || getXDCAddress(checksummedSenderAddress)}`}</span>
               : senderName
           }
         </div>
@@ -93,6 +95,7 @@ function RecipientWithAddress ({
   recipientEns,
   recipientName,
 }) {
+  const { getXDCAddress } = usePrefix()
   const t = useI18nContext()
   const [addressCopied, setAddressCopied] = useState(false)
 
@@ -114,7 +117,7 @@ function RecipientWithAddress ({
       className="sender-to-recipient__party sender-to-recipient__party--recipient sender-to-recipient__party--recipient-with-address"
       onClick={() => {
         setAddressCopied(true)
-        copyToClipboard(checksummedRecipientAddress)
+        copyToClipboard(getXDCAddress(checksummedRecipientAddress))
         if (onRecipientClick) {
           onRecipientClick()
         }
@@ -123,7 +126,7 @@ function RecipientWithAddress ({
       {!addressOnly && (
         <div className="sender-to-recipient__sender-icon">
           <Identicon
-            address={checksummedRecipientAddress}
+            address={getXDCAddress(checksummedRecipientAddress)}
             diameter={24}
             image={assetImage}
           />
@@ -141,7 +144,7 @@ function RecipientWithAddress ({
           <span>{ addressOnly ? `${t('to')}: ` : '' }</span>
           {
             addressOnly
-              ? (recipientNickname || recipientEns || checksummedRecipientAddress)
+              ? (recipientNickname || recipientEns || getXDCAddress(checksummedRecipientAddress))
               : (recipientNickname || recipientEns || recipientName || t('newContract'))
           }
         </div>

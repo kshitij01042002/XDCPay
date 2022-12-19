@@ -66,8 +66,16 @@ export function isValidAddress (address) {
   if (!address || address === '0x0000000000000000000000000000000000000000') {
     return false
   }
-  const prefixed = address.startsWith('0X') ? address : ethUtil.addHexPrefix(address)
-  return (isAllOneCase(prefixed.slice(2)) && ethUtil.isValidAddress(prefixed)) || ethUtil.isValidChecksumAddress(prefixed)
+  if (address.startsWith('xdc')) {
+    const prefixed = address.startsWith('xdc') ? address : ethUtil.addHexPrefix(address)
+    const prefix = 'xdc'
+    const start = address?.slice(0, 3)
+    const newAddress = start.toLowerCase() === prefix ? (`0x${address.substring(3)}`) : address
+    return (isAllOneCase(prefixed.slice(3)) && ethUtil.isValidAddress(newAddress)) || ethUtil.isValidChecksumAddress(newAddress)
+  } else {
+    const prefixed = address.startsWith('0X') ? address : ethUtil.addHexPrefix(address)
+    return (isAllOneCase(prefixed.slice(2)) && ethUtil.isValidAddress(prefixed)) || ethUtil.isValidChecksumAddress(prefixed)
+  }
 }
 
 export function isValidDomainName (address) {
