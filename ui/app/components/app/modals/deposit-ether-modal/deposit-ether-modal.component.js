@@ -80,7 +80,7 @@ export default class DepositEtherModal extends Component {
   render () {
     const { network, toWyre, toCoinSwitch, address, toFaucet } = this.props
 
-    const isTestNetwork = ['3', '4', '5', '42', '50', '51'].find((n) => n === network)
+    const isTestNetwork = ['3', '4', '5', '42', '51'].find((n) => n === network)
     const networkName = getNetworkDisplayName(network)
 
     return (
@@ -129,7 +129,32 @@ export default class DepositEtherModal extends Component {
               onButtonClick: () => toFaucet(network),
               hide: !isTestNetwork,
             })}
-            {this.renderRow({
+            {/* {this.renderRow({
+              logo: (
+                <div
+                  className="deposit-ether-modal__logo"
+                  style={{
+                    backgroundImage: "url('./images/wyre.svg')",
+                    height: '40px',
+                  }}
+                />
+              ),
+              title: this.context.t('buyWithWyre'),
+              text: this.context.t('buyWithWyreDescription'),
+              buttonLabel: this.context.t('continueToWyre'),
+              onButtonClick: () => {
+                this.context.metricsEvent({
+                  eventOpts: {
+                    category: 'Accounts',
+                    action: 'Deposit Ether',
+                    name: 'Click buy XDC via Simplex',
+                  },
+                })
+                toWyre(address)
+              },
+              hide: isTestNetwork,
+            })} */}
+            {/* {this.renderRow({
               logo: (
                 <div
                   className="deposit-ether-modal__logo"
@@ -178,7 +203,7 @@ export default class DepositEtherModal extends Component {
                 toCoinSwitch(address)
               },
               hide: isTestNetwork,
-            })}
+            })} */}
           </div>
         </div>
       </div>
