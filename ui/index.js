@@ -113,8 +113,7 @@ async function startApp (metamaskState, backgroundConnection, opts) {
   }
 
   backgroundConnection.on('update', function (state) {
-    state.nativeCurrency = 'XDC'
-    console.log('=====================', state.nativeCurrency)
+    if(state.nativeCurrency === 'ETH') state.nativeCurrency = 'XDC'
     store.dispatch(actions.updateMetamaskState(state))
   })
 
