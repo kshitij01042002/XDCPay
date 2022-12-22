@@ -29,6 +29,7 @@ app/.DS_Store
 .out/
 coverage/
 dist
+dist/
 builds/
 builds.zip
 

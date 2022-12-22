@@ -3,6 +3,7 @@ $fa-font-path: 'fonts/fontawesome';
 @import '../../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
 @import '../../../../node_modules/@fortawesome/fontawesome-free/scss/solid';
 @import '../../../../node_modules/@fortawesome/fontawesome-free/scss/regular';
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800&display=swap");
 
 @font-face {
   font-family: 'Roboto';
@@ -46,28 +47,8 @@ $fa-font-path: 'fonts/fontawesome';
   src: local('Roboto Black'), local('Roboto-Black'), url('fonts/Roboto/Roboto-Black.ttf') format('truetype');
 }
 
-@font-face {
-  font-family: 'Euclid';
-  font-style: normal;
-  font-weight: 400;
-  src: url('fonts/Euclid/EuclidCircularB-Regular-WebXL.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Euclid';
-  font-style: italic;
-  font-weight: 400;
-  src: url('fonts/Euclid/EuclidCircularB-RegularItalic-WebXL.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Euclid';
-  font-style: normal;
-  font-weight: 700;
-  src: url('fonts/Euclid/EuclidCircularB-Bold-WebXL.ttf') format('truetype');
-}
-
-$font-family: Euclid, Roboto, Helvetica, Arial, sans-serif;
+//$font-family: Inter-Regular, Roboto, Helvetica, Arial, sans-serif;
+$font-family: 'Fira Sans', sans-serif;
 
 // Typography
 @mixin H1 {
