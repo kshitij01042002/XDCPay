@@ -33,6 +33,7 @@ export default class EnsInput extends Component {
     onValidAddressTyped: PropTypes.func,
     contact: PropTypes.object,
     getXDCAddress: PropTypes.func,
+    get0xAddress: PropTypes.func,
   }
 
   state = {
@@ -111,25 +112,25 @@ export default class EnsInput extends Component {
   }
 
   onChange = (e) => {
-    const { network, onChange, updateEnsResolution, updateEnsResolutionError, onValidAddressTyped } = this.props
+    const { network, onChange, updateEnsResolution, updateEnsResolutionError, onValidAddressTyped, get0xAddress } = this.props
     const input = e.target.value
     const networkHasEnsSupport = getNetworkEnsSupport(network)
 
-    this.setState({ input }, () => onChange(input))
+    this.setState({ input }, () => onChange(get0xAddress(input)))
 
     // Empty ENS state if input is empty
     // maybe scan ENS
 
-    if (!networkHasEnsSupport && !isValidAddress(input) && !isValidAddressHead(input)) {
+    if (!networkHasEnsSupport && !isValidAddress(get0xAddress(input)) && !isValidAddressHead(get0xAddress(input))) {
       updateEnsResolution('')
       updateEnsResolutionError(networkHasEnsSupport ? '' : 'Network does not support ENS')
       return
     }
 
-    if (isValidDomainName(input)) {
-      this.lookupEnsName(input)
-    } else if (onValidAddressTyped && isValidAddress(input)) {
-      onValidAddressTyped(input)
+    if (isValidDomainName(get0xAddress(input))) {
+      this.lookupEnsName(get0xAddress(input))
+    } else if (onValidAddressTyped && isValidAddress(get0xAddress(input))) {
+      onValidAddressTyped(get0xAddress(input))
     } else {
       updateEnsResolution('')
       updateEnsResolutionError('')

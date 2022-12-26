@@ -140,10 +140,10 @@
     "message": "Active"
   },
   "activity": {
-    "message": "Activity"
+    "message": "Transactions"
   },
   "activityLog": {
-    "message": "activity log"
+    "message": "Transactions log"
   },
   "addNetwork": {
     "message": "Add Network"

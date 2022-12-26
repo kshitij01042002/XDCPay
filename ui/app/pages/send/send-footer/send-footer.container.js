@@ -33,8 +33,9 @@ import {
   constructTxParams,
   constructUpdatedTx,
 } from './send-footer.utils'
+import withPrefix from '../../../hoc/withPrefix'
 
-export default connect(mapStateToProps, mapDispatchToProps)(SendFooter)
+export default withPrefix(connect(mapStateToProps, mapDispatchToProps)(SendFooter))
 
 function mapStateToProps (state) {
 
