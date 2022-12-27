@@ -4,7 +4,7 @@
 
 $hover-secondary: #b0d7f2;
 $hover-default: #b3b3b3;
-$hover-confirm: #0372c3;
+$hover-confirm: #03be46;
 $hover-red: #feb6bf;
 $hover-red-primary: #c72837;
 $hover-orange: #ffd3b5;
@@ -146,8 +146,8 @@ $warning-light-orange: #f8b588;
 
 .btn-primary {
   color: $white;
-  border: 2px solid $Blue-500;
-  background-color: $Blue-500;
+  border: 2px solid $Orange-500;
+  background-color: $Orange-500;
 
   &:hover {
     border-color: $hover-confirm;
@@ -303,11 +303,11 @@ button.primary {
   }
 
   &.btn-primary {
-    background-color: $Blue-500;
+    background-color: $Orange-500;
 
     &--disabled,
     &[disabled] {
-      background-color: $hover-secondary;
+      background-color: $hover-confirm;
     }
 
     &:active {
