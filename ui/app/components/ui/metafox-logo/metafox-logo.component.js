@@ -30,7 +30,7 @@ export default class MetaFoxLogo extends PureComponent {
         />
         <img
           {...iconProps}
-          src="/images/XDCPay.svg"
+          src="/images/logo/XDCPay.svg"
           className={classnames('app-header__metafox-logo', 'app-header__metafox-logo--icon')}
         />
       </div>
