@@ -334,7 +334,7 @@ export default class MetamaskController extends EventEmitter {
     const providerOpts = {
       static: {
         eth_syncing: false,
-        web3_clientVersion: `MetaMask/v${version}`,
+        web3_clientVersion: `XDCPay/v${version}`,
       },
       version,
       // account mgmt
@@ -1461,7 +1461,7 @@ export default class MetamaskController extends EventEmitter {
     const { hostname } = new URL(sender.url)
     // Check if new connection is blocked if phishing detection is on
     if (usePhishDetect && this.phishingController.test(hostname)) {
-      log.debug('MetaMask - sending phishing warning for', hostname)
+      log.debug('XDCPay - sending phishing warning for', hostname)
       this.sendPhishingWarning(connectionStream, hostname)
       return
     }
