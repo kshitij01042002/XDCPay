@@ -909,7 +909,7 @@
   "xdc": {
     "message": "XDC Network"
   },
-  "xdcApothem": {
+  "apothem": {
     "message": "XDC Testnet Apothem"
   },
   "mainnet": {
@@ -1328,13 +1328,13 @@
     "message": "Send Amount"
   },
   "sendETH": {
-    "message": "Send ETH"
+    "message": "Send XDC"
   },
   "sendTokens": {
     "message": "Send Tokens"
   },
   "sentEther": {
-    "message": "sent ether"
+    "message": "sent XDC"
   },
   "sentTokens": {
     "message": "sent tokens"
