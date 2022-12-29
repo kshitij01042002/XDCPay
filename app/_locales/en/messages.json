@@ -704,7 +704,7 @@
     "message": "Gas Price Extremely Low"
   },
   "gasPriceInfoModalContent": {
-    "message": "Gas price specifies the amount of Ether you are willing to pay for each unit of gas."
+    "message": "Gas price specifies the amount of XDC you are willing to pay for each unit of gas."
   },
   "gasPriceNoDenom": {
     "message": "Gas Price"

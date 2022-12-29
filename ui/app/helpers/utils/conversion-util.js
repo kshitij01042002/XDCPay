@@ -95,7 +95,6 @@ const converter = ({
   let convertedValue = fromNumericBase ? toBigNumber[fromNumericBase](value) : value
 
   if (fromDenomination) {
-    console.log('========', toNormalizedDenomination, fromDenomination)
     convertedValue = toNormalizedDenomination[fromDenomination](convertedValue)
   }
 
