@@ -147,7 +147,7 @@ export default class UnlockPage extends Component {
             <h1 className="unlock-page__title">
               { t('welcomeBack') }
             </h1>
-            <div>{ t('unlockMessage') }</div>
+            {/* <div>{ t('unlockMessage') }</div> */}
             <form
               className="unlock-page__form"
               onSubmit={this.handleSubmit}
