@@ -57,6 +57,13 @@ export default class Welcome extends PureComponent {
           >
             { t('getStarted') }
           </Button>
+          <div className="footer-section">
+            <img src="images/build_it_on.png" height={50} />
+            <div className="footer-section-powered">
+              <p>Powered By:</p>
+              <img src="/images/blocksscan.svg" height={30} />
+            </div>
+          </div>
         </div>
       </div>
     )

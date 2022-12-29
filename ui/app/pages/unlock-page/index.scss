@@ -49,3 +49,21 @@
     }
   }
 }
+
+.footer-section {
+  display: flex;
+  background-color: $primary-blue;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 24px;
+  padding: 10px;
+  border-radius: 4px;
+  align-items: center;
+
+  &-powered {
+    p {
+      font-size: 10px;
+      color: $white;
+    }
+  }
+}

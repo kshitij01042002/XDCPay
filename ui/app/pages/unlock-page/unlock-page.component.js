@@ -138,49 +138,59 @@ export default class UnlockPage extends Component {
     const { onImport, onRestore } = this.props
 
     return (
-      <div className="unlock-page__container">
-        <div className="unlock-page">
-          <div className="unlock-page__mascot-container">
-            <SiteIcon icon="/images/logo/XDCPay.svg" size={120} />
-          </div>
-          <h1 className="unlock-page__title">
-            { t('welcomeBack') }
-          </h1>
-          <div>{ t('unlockMessage') }</div>
-          <form
-            className="unlock-page__form"
-            onSubmit={this.handleSubmit}
-          >
-            <TextField
-              id="password"
-              label={t('password')}
-              type="password"
-              value={password}
-              onChange={(event) => this.handleInputChange(event)}
-              error={error}
-              autoFocus
-              autoComplete="current-password"
-              theme="material"
-              fullWidth
-            />
-          </form>
-          { this.renderSubmitButton() }
-          <div className="unlock-page__links">
-            <div
-              className="unlock-page__link"
-              onClick={() => onRestore()}
-            >
-              { t('restoreFromSeed') }
+      <React.Fragment>
+        <div className="unlock-page__container">
+          <div className="unlock-page">
+            <div className="unlock-page__mascot-container">
+              <img src="/images/logo/XDCPay.svg" height={120} />
             </div>
-            <div
-              className="unlock-page__link unlock-page__link--import"
-              onClick={() => onImport()}
+            <h1 className="unlock-page__title">
+              { t('welcomeBack') }
+            </h1>
+            <div>{ t('unlockMessage') }</div>
+            <form
+              className="unlock-page__form"
+              onSubmit={this.handleSubmit}
             >
-              { t('importUsingSeed') }
+              <TextField
+                id="password"
+                label={t('password')}
+                type="password"
+                value={password}
+                onChange={(event) => this.handleInputChange(event)}
+                error={error}
+                autoFocus
+                autoComplete="current-password"
+                theme="material"
+                fullWidth
+              />
+            </form>
+            { this.renderSubmitButton() }
+            <div className="unlock-page__links">
+              <div
+                className="unlock-page__link"
+                onClick={() => onRestore()}
+              >
+                { t('restoreFromSeed') }
+              </div>
+              <div
+                className="unlock-page__link unlock-page__link--import"
+                onClick={() => onImport()}
+              >
+                { t('importUsingSeed') }
+              </div>
+            </div>
+
+            <div className="footer-section">
+              <img src="images/build_it_on.png" height={50} />
+              <div className="footer-section-powered">
+                <p>Powered By:</p>
+                <img src="/images/blocksscan.svg" height={30} />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </React.Fragment>
     )
   }
 }

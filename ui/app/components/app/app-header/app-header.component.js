@@ -92,10 +92,6 @@ export default class AppHeader extends PureComponent {
         className={classnames('app-header', { 'app-header--back-drop': isUnlocked })}
       >
         <div className="app-header__contents">
-          <MetaFoxLogo
-            unsetIconHeight
-            onClick={() => history.push(DEFAULT_ROUTE)}
-          />
           <div className="app-header__account-menu-container">
             {
               !hideNetworkIndicator && (
@@ -109,7 +105,13 @@ export default class AppHeader extends PureComponent {
                 </div>
               )
             }
+            <MetaFoxLogo
+              unsetIconHeight
+              onClick={() => history.push(DEFAULT_ROUTE)}
+            />
+            <div style={{minWidth: '128px', display: 'flex', justifyContent: 'flex-end'}} >
             { this.renderAccountMenu() }
+            </div>
           </div>
         </div>
       </div>
