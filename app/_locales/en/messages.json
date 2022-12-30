@@ -632,7 +632,7 @@
     "description": "Title for error stack, which is displayed for debugging purposes"
   },
   "ethereumPublicAddress": {
-    "message": "Ethereum Public Address"
+    "message": "XDC Public Address"
   },
   "etherscanView": {
     "message": "View account on Blocksscan"
