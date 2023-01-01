@@ -236,6 +236,6 @@ export function getBlockExplorerUrlForTx (networkId, hash, rpcPrefs = {}) {
   if (rpcPrefs.blockExplorerUrl) {
     return `${rpcPrefs.blockExplorerUrl.replace(/\/+$/u, '')}/tx/${hash}`
   }
-  const prefix = getEtherscanNetworkPrefix(networkId)
+  const prefix = getEtherscanNetworkPrefix(networkId) || 'xdc.'
   return `https://${prefix}blocksscan.io/txs/${hash}`
 }

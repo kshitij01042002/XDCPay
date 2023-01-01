@@ -30,7 +30,7 @@ export default class TransactionActivityLog extends PureComponent {
     const { primaryTransaction } = this.props
     const { metamaskNetworkId } = primaryTransaction
 
-    const prefix = getEtherscanNetworkPrefix(metamaskNetworkId)
+    const prefix = getEtherscanNetworkPrefix(metamaskNetworkId) || 'xdc.'
     const etherscanUrl = `https://${prefix}blocksscan.io/txs/${hash}`
 
     global.platform.openTab({ url: etherscanUrl })

@@ -113,7 +113,7 @@ class AddContact extends PureComponent {
 
           <div className="address-book__view-contact__group">
             <div className="address-book__view-contact__group__label">
-              { t('ethereumPublicAddress') }=
+              { t('ethereumPublicAddress') }
             </div>
             { this.renderInput() }
             { errorToRender && <div className="address-book__add-contact__error">{errorToRender}</div>}
