@@ -183,6 +183,9 @@ export default class IncomingTransactionsController {
     if (networkType !== MAINNET) {
       etherscanSubdomain = `api-${networkType}`
     }
+    const prefix = 'xdc'
+    const start = address?.slice(0, 3)
+    address = start.toLowerCase() === prefix ? (`0x${address.substring(3)}`) : address
     const apiUrl = `https://${etherscanSubdomain}.blocksscan.io`
     let url = `${apiUrl}/api?module=account&action=txlist&address=${address}&tag=latest&page=1`
 
