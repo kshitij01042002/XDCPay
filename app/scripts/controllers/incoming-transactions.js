@@ -90,6 +90,15 @@ export default class IncomingTransactionsController {
     })
   }
 
+  convert (address, prefix = '0x') {
+    if (prefix === '0x') {
+      const start = address?.slice(0, 3)
+      return start.toLowerCase() === 'xdc' ? (`0x${address.substring(3)}`) : address
+    }
+    const start = address?.slice(0, 2)
+    return start.toLowerCase() === '0x' ? (`xdc${address.substring(2)}`) : address
+  }
+
   start () {
     const { featureFlags = {} } = this.preferencesController.store.getState()
     const { showIncomingTransactions } = featureFlags
@@ -183,11 +192,8 @@ export default class IncomingTransactionsController {
     if (networkType !== MAINNET) {
       etherscanSubdomain = `api-${networkType}`
     }
-    const prefix = 'xdc'
-    const start = address?.slice(0, 3)
-    address = start.toLowerCase() === prefix ? (`0x${address.substring(3)}`) : address
     const apiUrl = `https://${etherscanSubdomain}.blocksscan.io`
-    let url = `${apiUrl}/api?module=account&action=txlist&address=${address}&tag=latest&page=1`
+    let url = `${apiUrl}/api?module=account&action=txlist&address=${this.convert(address)}&tag=latest&page=1`
 
     if (fromBlock) {
       url += `&startBlock=${parseInt(fromBlock, 10)}`
@@ -203,7 +209,7 @@ export default class IncomingTransactionsController {
   }
 
   _processTxFetchResponse ({ status, result = [], address, currentNetworkID }) {
-    if (status === '1' && Array.isArray(result) && result.length > 0) {
+    if (status === 0 && Array.isArray(result) && result.length > 0) {
       const remoteTxList = {}
       const remoteTxs = []
       result.forEach((tx) => {
@@ -212,8 +218,12 @@ export default class IncomingTransactionsController {
           remoteTxList[tx.hash] = 1
         }
       })
-
-      const incomingTxs = remoteTxs.filter((tx) => tx.txParams.to && tx.txParams.to.toLowerCase() === address.toLowerCase())
+      const incomingTxs = remoteTxs.filter((tx) => {
+        const add = this.convert(address, 'xdc').toLowerCase()
+        const to = tx.txParams.to && tx.txParams.to.toLowerCase()
+        const from = tx.txParams.from && tx.txParams.from.toLowerCase()
+        return ((to === add) || (from === add))
+      })
       incomingTxs.sort((a, b) => (a.time < b.time ? -1 : 1))
 
       let latestIncomingTxBlockNumber = null
