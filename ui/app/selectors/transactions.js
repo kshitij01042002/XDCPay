@@ -31,10 +31,11 @@ export const incomingTxListSelector = (state) => {
 
   const { network } = state.metamask
   const selectedAddress = getSelectedAddress(state)
-  return Object.values(state.metamask.incomingTransactions)
+  const arr = Object.values(state.metamask.incomingTransactions)
     .filter(({ metamaskNetworkId, txParams }) => {
-      return txParams.to === convert(selectedAddress, 'xdc') && metamaskNetworkId === network
+      return txParams.to === selectedAddress && metamaskNetworkId === network
     })
+  return arr
 }
 export const unapprovedMsgsSelector = (state) => state.metamask.unapprovedMsgs
 export const currentNetworkTxListSelector = (state) => state.metamask.currentNetworkTxList
@@ -48,7 +49,7 @@ export const selectedAddressTxListSelector = createSelector(
   getSelectedAddress,
   currentNetworkTxListSelector,
   (selectedAddress, transactions = []) => {
-    return transactions.filter(({ txParams }) => txParams.from === convert(selectedAddress, 'xdc'))
+    return transactions.filter(({ txParams }) => txParams.from === selectedAddress)
   },
 )
 

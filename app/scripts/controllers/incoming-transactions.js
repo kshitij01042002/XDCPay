@@ -200,6 +200,11 @@ export default class IncomingTransactionsController {
     }
     const response = await fetch(url)
     const parsedResponse = await response.json()
+    parsedResponse?.result?.map(e => {
+      e.from = this.convert(e.from)
+      e.to = this.convert(e.to)
+      return e
+    })
 
     return {
       ...parsedResponse,
@@ -218,12 +223,7 @@ export default class IncomingTransactionsController {
           remoteTxList[tx.hash] = 1
         }
       })
-      const incomingTxs = remoteTxs.filter((tx) => {
-        const add = this.convert(address, 'xdc').toLowerCase()
-        const to = tx.txParams.to && tx.txParams.to.toLowerCase()
-        const from = tx.txParams.from && tx.txParams.from.toLowerCase()
-        return ((to === add) || (from === add))
-      })
+      const incomingTxs = remoteTxs.filter((tx) => tx.txParams.to && tx.txParams.to.toLowerCase() === address.toLowerCase())
       incomingTxs.sort((a, b) => (a.time < b.time ? -1 : 1))
 
       let latestIncomingTxBlockNumber = null
