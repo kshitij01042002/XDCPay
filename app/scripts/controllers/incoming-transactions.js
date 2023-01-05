@@ -209,7 +209,7 @@ export default class IncomingTransactionsController {
   }
 
   _processTxFetchResponse ({ status, result = [], address, currentNetworkID }) {
-    if (status === 0 && Array.isArray(result) && result.length > 0) {
+    if (status === 1 && Array.isArray(result) && result.length > 0) {
       const remoteTxList = {}
       const remoteTxs = []
       result.forEach((tx) => {
