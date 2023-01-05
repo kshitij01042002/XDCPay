@@ -248,8 +248,10 @@ export default class IncomingTransactionsController {
   }
 
   _normalizeTxFromEtherscan (txMeta, currentNetworkID) {
-    const time = parseInt(txMeta.timeStamp, 10) * 1000
-    const status = txMeta.isError === '0' ? 'confirmed' : 'failed'
+    const time = new Date(txMeta.timestamp).getTime()
+    // ToDo: Need to manage isError flag
+    // const status = txMeta.isError === '0' ? 'confirmed' : 'failed'
+    const status = txMeta.isError === '0' ? 'confirmed' : 'confirmed'
     return {
       blockNumber: txMeta.blockNumber,
       id: createId(),

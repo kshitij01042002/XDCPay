@@ -222,8 +222,8 @@ export function getStatusKey (transaction) {
   if (status === TRANSACTION_STATUS_CONFIRMED && type === TRANSACTION_TYPE_CANCEL) {
     return 'cancelled'
   }
-
-  return transaction.status
+  // ToDo: Need to manage transaction status
+  return 'confirmed' //transaction.status
 }
 
 /**
