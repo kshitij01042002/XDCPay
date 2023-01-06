@@ -25,7 +25,7 @@ import TrezorKeyring from 'eth-trezor-keyring'
 import LedgerBridgeKeyring from '@metamask/eth-ledger-bridge-keyring'
 import EthQuery from 'eth-query'
 import nanoid from 'nanoid'
-import contractMap from 'eth-contract-metadata'
+import contractMap from '../../ui/app/helpers/utils/contract'
 import {
   AddressBookController,
   CurrencyRateController,
@@ -711,7 +711,7 @@ export default class MetamaskController extends EventEmitter {
           ? (
             accountTokens[address][networkType].filter(({ address: tokenAddress }) => {
               const checksumAddress = ethUtil.toChecksumAddress(tokenAddress)
-              return contractMap[checksumAddress] ? contractMap[checksumAddress].erc20 : true
+              return contractMap[checksumAddress.toLowerCase()] ? contractMap[checksumAddress.toLowerCase()].erc20 : true
             })
           )
           : accountTokens[address][networkType]
