@@ -239,3 +239,13 @@ export function getBlockExplorerUrlForTx (networkId, hash, rpcPrefs = {}) {
   const prefix = getEtherscanNetworkPrefix(networkId) || 'xdc.'
   return `https://${prefix}blocksscan.io/txs/${hash}`
 }
+
+/**
+ * Returns an external block explorer URL at which a transaction can be viewed.
+ * @param {number} networkId
+ * @param {string} hash
+ */
+export function getBlockExplorerUrlForAddress (networkId, hash) {
+  const prefix = getEtherscanNetworkPrefix(networkId) || 'xdc.'
+  return `https://${prefix}blocksscan.io/address/${hash}`
+}

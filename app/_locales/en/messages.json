@@ -831,7 +831,7 @@
     "message": "A token here reuses a symbol from another token you watch, this can be confusing or deceptive."
   },
   "invalidAddressRecipientNotEthNetwork": {
-    "message": "Not ETH network, set to lowercase"
+    "message": "Not XDC network, set to lowercase"
   },
   "invalidInput": {
     "message": "Invalid input."

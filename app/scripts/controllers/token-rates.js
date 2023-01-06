@@ -23,13 +23,21 @@ export default class TokenRatesController {
     this.preferences = preferences
   }
 
+  convert (address, prefix = '0x') {
+    if (prefix === '0x') {
+      const start = address?.slice(0, 3)
+      return start.toLowerCase() === 'xdc' ? (`0x${address.substring(3)}`) : address
+    }
+    const start = address?.slice(0, 2)
+    return start.toLowerCase() === '0x' ? (`xdc${address.substring(2)}`) : address
+  }
   /**
    * Updates exchange rates for all tokens
    */
   async updateExchangeRates () {
     const contractExchangeRates = {}
-    const nativeCurrency = this.currency ? this.currency.state.nativeCurrency.toLowerCase() : 'eth'
-    const pairs = this._tokens.map((token) => token.address).join(',')
+    const nativeCurrency = this.currency ? this.currency.state.nativeCurrency.toLowerCase() : 'xdc'
+    const pairs = this._tokens.map((token) => this.convert(token.address, 'xdc')).join(',')
     const query = `contract_addresses=${pairs}&vs_currencies=${nativeCurrency}`
     if (this._tokens.length > 0) {
       try {
