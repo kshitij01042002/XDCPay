@@ -4,6 +4,8 @@ import {
   RINKEBY_CHAIN_ID,
   KOVAN_CHAIN_ID,
   GOERLI_CHAIN_ID,
+  XDC_CHAIN_ID,
+  XDC_APOTHEM_CHAIN_ID,
 } from '../controllers/network/enums'
 
 const standardNetworkId = {
@@ -12,6 +14,8 @@ const standardNetworkId = {
   '4': RINKEBY_CHAIN_ID,
   '42': KOVAN_CHAIN_ID,
   '5': GOERLI_CHAIN_ID,
+  '50': XDC_CHAIN_ID,
+  '51': XDC_APOTHEM_CHAIN_ID,
 }
 
 export default function selectChainId (metamaskState) {
