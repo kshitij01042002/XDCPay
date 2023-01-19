@@ -36,7 +36,8 @@ export default class TokenRatesController {
    */
   async updateExchangeRates () {
     const contractExchangeRates = {}
-    const nativeCurrency = this.currency ? this.currency.state.nativeCurrency.toLowerCase() : 'usd'
+    // const nativeCurrency = this.currency ? this.currency.state.nativeCurrency.toLowerCase() : 'usd'
+    const nativeCurrency = 'usd'
     const pairs = this._tokens.map((token) => this.convert(token.address, 'xdc')).join(',')
     const query = `contract_addresses=${pairs}&vs_currencies=${nativeCurrency}`
     if (this._tokens.length > 0) {
@@ -44,7 +45,7 @@ export default class TokenRatesController {
         const response = await window.fetch(`https://api.coingecko.com/api/v3/simple/token_price/xdc-network?${query}`)
         const prices = await response.json()
         this._tokens.forEach((token) => {
-          const price = prices[token.address.toLowerCase()] || prices[ethUtil.toChecksumAddress(token.address)]
+          const price = prices[token.address.toLowerCase()] || prices[this.convert(token.address.toLowerCase(), 'xdc')] || prices[ethUtil.toChecksumAddress(token.address)]
           contractExchangeRates[normalizeAddress(token.address)] = price ? price[nativeCurrency] : 0
         })
       } catch (error) {
