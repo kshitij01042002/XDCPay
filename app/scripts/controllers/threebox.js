@@ -1,9 +1,7 @@
 import ObservableStore from 'obs-store'
 
 /* eslint-disable import/first,import/order */
-const Box = process.env.IN_TEST
-  ? require('../../../development/mock-3box')
-  : require('3box')
+const Box = require('../../../development/mock-3box')
 /* eslint-enable import/order */
 
 import log from 'loglevel'
