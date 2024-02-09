@@ -56,7 +56,7 @@ const defaultNetworksData = [
     labelKey: 'xdc',
     iconColor: '#29B6AF',
     providerType: 'xdc',
-    rpcUrl: 'https://erpc.xinfin.network/',
+    rpcUrl: 'https://earpc.xinfin.network/',
     chainId: '50',
     ticker: 'XDC',
     blockExplorerUrl: 'https://xdc.blocksscan.io',
@@ -65,10 +65,10 @@ const defaultNetworksData = [
     labelKey: 'apothem',
     iconColor: '#29B6AF',
     providerType: 'apothem',
-    rpcUrl: 'https://erpc.apothem.network/',
+    rpcUrl: 'https://earpc.apothem.network/',
     chainId: '51',
     ticker: 'XDC',
-    blockExplorerUrl: 'https://apothem.blocksscan.io',
+    blockExplorerUrl: 'https://apothem.xdcscan.io',
   },
 ]
 
