@@ -660,7 +660,7 @@
     "message": "Jāatlasa vismaz 1 marķieris."
   },
   "needEtherInWallet": {
-    "message": "Lai izmantotu decentralizētas lietotnes ar XDCPay, jūsu makā jābūt Ether."
+    "message": "Lai izmantotu decentralizētas lietotnes ar XDCPay, jūsu makā jābūt XDC."
   },
   "needImportFile": {
     "message": "Jums jāatlasa fails, ko importēt",

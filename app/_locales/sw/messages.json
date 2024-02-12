@@ -642,7 +642,7 @@
     "message": "Lazima uchague angalau kianzio 1."
   },
   "needEtherInWallet": {
-    "message": "Ili kuingiliana na programu zilizosambazwa kwa kutumia XDCPay, utahitaji kuwa na Ether kwenye waleti yako."
+    "message": "Ili kuingiliana na programu zilizosambazwa kwa kutumia XDCPay, utahitaji kuwa na XDC kwenye waleti yako."
   },
   "needImportFile": {
     "message": "Unapaswa kuchagua faili la kuhamisha.",

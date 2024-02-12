@@ -648,7 +648,7 @@
     "message": "Skal vælge mindst 1 token."
   },
   "needEtherInWallet": {
-    "message": "Du skal have Ether i din tegnebog for at interagere med decentraliserede applikationer, der bruger XDCPay."
+    "message": "Du skal have XDC i din tegnebog for at interagere med decentraliserede applikationer, der bruger XDCPay."
   },
   "needImportFile": {
     "message": "Du skal vælge en fil, der skal importeres.",

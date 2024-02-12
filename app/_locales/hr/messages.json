@@ -657,7 +657,7 @@
     "message": "Mora se odabrati barem jedan token."
   },
   "needEtherInWallet": {
-    "message": "Trebate Ether u svojem novčaniku kako biste ostvarili interakciju s decentraliziranim aplikacijama uporabom usluge XDCPay. "
+    "message": "Trebate XDC u svojem novčaniku kako biste ostvarili interakciju s decentraliziranim aplikacijama uporabom usluge XDCPay. "
   },
   "needImportFile": {
     "message": "Morate odabrati datoteku za uvoz.",

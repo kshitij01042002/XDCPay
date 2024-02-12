@@ -661,7 +661,7 @@
     "message": "Valittava vähintään 1 poletti."
   },
   "needEtherInWallet": {
-    "message": "Ollaksesi vuorovaikutuksessa hajautettujen sovellusten kanssa sinulla on oltava lompakossasi Ether."
+    "message": "Ollaksesi vuorovaikutuksessa hajautettujen sovellusten kanssa sinulla on oltava lompakossasi XDC."
   },
   "needImportFile": {
     "message": "Sinun tarvitsee valita tuotava tiedosto.",

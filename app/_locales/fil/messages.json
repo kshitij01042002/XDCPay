@@ -602,7 +602,7 @@
     "message": "Dapat pumili ng kahit 1 token."
   },
   "needEtherInWallet": {
-    "message": "Para gumamit ng mga decentralized na application gamit ang XDCPay, mangangailangan ka ng Ether sa iyong wallet."
+    "message": "Para gumamit ng mga decentralized na application gamit ang XDCPay, mangangailangan ka ng XDC sa iyong wallet."
   },
   "needImportFile": {
     "message": "Dapat kang pumili ng file na ii-import.",

@@ -649,7 +649,7 @@
     "message": "Izbran mora biti vsaj 1 žeton."
   },
   "needEtherInWallet": {
-    "message": "Za interakcijo z decentraliziranimi aplikacijami boste v svoji denarnici potrebovali Eter."
+    "message": "Za interakcijo z decentraliziranimi aplikacijami boste v svoji denarnici potrebovali XDC."
   },
   "needImportFile": {
     "message": "Za uvoz morate izbrati datoteko.",
