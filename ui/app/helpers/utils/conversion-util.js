@@ -31,6 +31,7 @@ const { BN } = ethUtil
 const BIG_NUMBER_WEI_MULTIPLIER = new BigNumber('1000000000000000000')
 const BIG_NUMBER_GWEI_MULTIPLIER = new BigNumber('1000000000')
 const BIG_NUMBER_ETH_MULTIPLIER = new BigNumber('1')
+const BIG_NUMBER_XDC_MULTIPLIER = new BigNumber('1')
 
 // Setter Maps
 const toBigNumber = {
@@ -42,11 +43,13 @@ const toNormalizedDenomination = {
   WEI: (bigNumber) => bigNumber.div(BIG_NUMBER_WEI_MULTIPLIER),
   GWEI: (bigNumber) => bigNumber.div(BIG_NUMBER_GWEI_MULTIPLIER),
   ETH: (bigNumber) => bigNumber.div(BIG_NUMBER_ETH_MULTIPLIER),
+  XDC: (bigNumber) => bigNumber.div(BIG_NUMBER_XDC_MULTIPLIER),
 }
 const toSpecifiedDenomination = {
   WEI: (bigNumber) => bigNumber.times(BIG_NUMBER_WEI_MULTIPLIER).round(),
   GWEI: (bigNumber) => bigNumber.times(BIG_NUMBER_GWEI_MULTIPLIER).round(9),
   ETH: (bigNumber) => bigNumber.times(BIG_NUMBER_ETH_MULTIPLIER).round(9),
+  XDC: (bigNumber) => bigNumber.div(BIG_NUMBER_XDC_MULTIPLIER).round(9),
 }
 const baseChange = {
   hex: (n) => n.toString(16),
@@ -61,7 +64,7 @@ const baseChange = {
 
 /**
  * Defines which type of denomination a value is in
- * @typedef {('WEI' | 'GWEI' | 'ETH')} EthDenomination
+ * @typedef {('WEI' | 'GWEI' | 'ETH' | 'XDC')} EthDenomination
  */
 
 /**

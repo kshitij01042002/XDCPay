@@ -105,7 +105,7 @@ export default class SignatureRequestOriginal extends Component {
     const { conversionRate } = this.props
     const { fromAccount: { balance } } = this.state
 
-    const balanceInEther = conversionUtil(balance, {
+    const balanceInXDC = conversionUtil(balance, {
       fromNumericBase: 'hex',
       toNumericBase: 'dec',
       fromDenomination: 'WEI',
@@ -119,7 +119,7 @@ export default class SignatureRequestOriginal extends Component {
           { `${this.context.t('balance')}:` }
         </div>
         <div className="request-signature__balance-value">
-          { `${balanceInEther} ETH` }
+          { `${balanceInXDC} XDC` }
         </div>
       </div>
     )
