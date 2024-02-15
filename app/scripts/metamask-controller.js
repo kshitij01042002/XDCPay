@@ -160,6 +160,7 @@ export default class MetamaskController extends EventEmitter {
         this.accountTracker.start()
         this.incomingTransactionsController.start()
         this.tokenRatesController.start()
+        console.log(this.tokenRatesController)
       } else {
         this.accountTracker.stop()
         this.incomingTransactionsController.stop()
