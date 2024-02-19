@@ -145,5 +145,40 @@
     "erc20": true,
     "symbol": "ECOIN",
     "decimals": 10
+  },
+  "0x49d3f7543335cf38fa10889ccff10207e22110b5": {
+    "name": "FXD",
+    "logo": "FXD.png",
+    "erc20": true,
+    "symbol": "FXD",
+    "decimals": 18
+  },
+  "0xb5fa33923ec3ff7f4b9ab7b4c20b236d31243f77": {
+    "name": "Crescite",
+    "logo": "CRE.png",
+    "erc20": true,
+    "symbol": "CRE",
+    "decimals": 18
+  },
+  "0x3279dbefabf3c6ac29d7ff24a6c46645f3f4403c": {
+    "name": "Fathom Protocol Token",
+    "logo": "FTHM.png",
+    "erc20": true,
+    "symbol": "FTHM",
+    "decimals": 18
+  },
+  "0x1ebb2c8a71a9ec59bf558886a8adf8f4a565814f": {
+    "name": "STASIS EURO",
+    "logo": "EURS.png",
+    "erc20": true,
+    "symbol": "EURS",
+    "decimals": 2
+  },
+  "0x1ebb2c8a71a9ec59bf558886a8adf8f4a565814f": {
+    "name": "STASIS EURO",
+    "logo": "EURS.png",
+    "erc20": true,
+    "symbol": "EURS",
+    "decimals": 2
   }
 }
