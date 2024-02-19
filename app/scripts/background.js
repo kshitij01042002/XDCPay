@@ -149,7 +149,6 @@ async function initialize () {
   const initState = await loadStateFromPersistence()
   const initLangCode = await getFirstPreferredLangCode()
   await setupController(initState, initLangCode)
-  console.log(initState)
   log.debug('XDCPay initialization complete.')
 }
 
