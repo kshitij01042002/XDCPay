@@ -679,7 +679,7 @@
     "message": "Il gas limite è il massimo importo di unità di gas che sei disposto a spendere."
   },
   "gasLimitTooLow": {
-    "message": "Il Gas Limite deve essere almeno 21000"
+    "message": "Il Gas Limite deve essere almeno 51000"
   },
   "gasUsed": {
     "message": "Gas Utilizzato"

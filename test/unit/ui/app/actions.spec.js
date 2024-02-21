@@ -825,8 +825,8 @@ describe('Actions', function () {
 
       const expectedActions = [
         { type: 'GAS_LOADING_STARTED' },
-        { type: 'UPDATE_GAS_LIMIT', value: '0x5208' },
-        { type: 'metamask/gas/SET_CUSTOM_GAS_LIMIT', value: '0x5208' },
+        { type: 'UPDATE_GAS_LIMIT', value: '0xC738' },
+        { type: 'metamask/gas/SET_CUSTOM_GAS_LIMIT', value: '0xC738' },
         { type: 'UPDATE_SEND_ERRORS', value: { gasLoadingError: null } },
         { type: 'GAS_LOADING_FINISHED' },
       ]
@@ -854,7 +854,7 @@ describe('Actions', function () {
 
     const txParams = {
       'from': '0x1',
-      'gas': '0x5208',
+      'gas': '0xC738',
       'gasPrice': '0x3b9aca00',
       'to': '0x2',
       'value': '0x0',

@@ -92,7 +92,7 @@ export default class AdvancedGasInputs extends Component {
         errorText: t('insufficientBalance'),
         errorType: 'error',
       }
-    } else if (gasLimit < 21000) {
+    } else if (gasLimit < 51000) {
       return {
         errorText: t('gasLimitTooLow'),
         errorType: 'error',

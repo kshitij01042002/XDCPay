@@ -443,7 +443,7 @@
     "message": "Limit GAS je maximálne množstvo jednotiek GAS, ktoré ste ochotní minúť."
   },
   "gasLimitTooLow": {
-    "message": "Limit paliva musí být alespoň 21000"
+    "message": "Limit paliva musí být alespoň 51000"
   },
   "gasUsed": {
     "message": "GAS použitý"

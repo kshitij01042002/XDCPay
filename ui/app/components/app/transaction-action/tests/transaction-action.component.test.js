@@ -26,7 +26,7 @@ describe('TransactionAction Component', function () {
         time: 1534045440641,
         txParams: {
           from: '0xc5ae6383e126f901dcb06131d97a88745bfa88d6',
-          gas: '0x5208',
+          gas: '0xC738',
           gasPrice: '0x3b9aca00',
           nonce: '0x96',
           to: 'sentEtherAddress',
@@ -59,7 +59,7 @@ describe('TransactionAction Component', function () {
         time: 1534045440641,
         txParams: {
           from: '0xc5ae6383e126f901dcb06131d97a88745bfa88d6',
-          gas: '0x5208',
+          gas: '0xC738',
           gasPrice: '0x3b9aca00',
           nonce: '0x96',
           to: 'approveAddress',
@@ -93,7 +93,7 @@ describe('TransactionAction Component', function () {
         time: 1534045440641,
         txParams: {
           from: '0xc5ae6383e126f901dcb06131d97a88745bfa88d6',
-          gas: '0x5208',
+          gas: '0xC738',
           gasPrice: '0x3b9aca00',
           nonce: '0x96',
           to: 'approveAddress',

@@ -445,7 +445,7 @@
     "message": "Datakraftgrense er det maksimale antall datakraft du er vilig til å benytte. "
   },
   "gasLimitTooLow": {
-    "message": "Datakraftsgrense må være minst 21000"
+    "message": "Datakraftsgrense må være minst 51000"
   },
   "gasUsed": {
     "message": "Brukt datakraft "

@@ -11,7 +11,7 @@ describe('TransactionBreakdown Component', function () {
       status: 'confirmed',
       txParams: {
         from: '0x1',
-        gas: '0x5208',
+        gas: '0xC738',
         gasPrice: '0x3b9aca00',
         nonce: '0xa4',
         to: '0x2',

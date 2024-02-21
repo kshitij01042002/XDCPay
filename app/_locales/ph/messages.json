@@ -121,7 +121,7 @@
     "message": "Mula sa"
   },
   "gasLimitTooLow": {
-    "message": "Ang gas limit ay hindi dabat bababa sa 21000"
+    "message": "Ang gas limit ay hindi dabat bababa sa 51000"
   },
   "getEther": {
     "message": "Kumuha ng Ether"

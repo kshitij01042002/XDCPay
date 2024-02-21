@@ -81,14 +81,14 @@ const mapStateToProps = (state, ownProps) => {
   const txParams = selectedTransaction?.txParams
     ? selectedTransaction.txParams
     : {
-      gas: send.gasLimit || '0x5208',
+      gas: send.gasLimit || '0xC738',
       gasPrice: send.gasPrice || getFastPriceEstimateInHexWEI(state, true),
       value: sendToken ? '0x0' : send.amount,
     }
 
   const { gasPrice: currentGasPrice, gas: currentGasLimit, value } = txParams
   const customModalGasPriceInHex = getCustomGasPrice(state) || currentGasPrice
-  const customModalGasLimitInHex = getCustomGasLimit(state) || currentGasLimit || '0x5208'
+  const customModalGasLimitInHex = getCustomGasLimit(state) || currentGasLimit || '0xC738'
   const customGasTotal = calcGasTotal(customModalGasLimitInHex, customModalGasPriceInHex)
 
   const gasButtonInfo = getRenderableBasicEstimateData(state, customModalGasLimitInHex)
@@ -296,7 +296,7 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
         dispatchHideSidebar()
       }
     },
-    disableSave: insufficientBalance || (isSpeedUp && customGasPrice === 0) || customGasLimit < 21000,
+    disableSave: insufficientBalance || (isSpeedUp && customGasPrice === 0) || customGasLimit < 51000,
   }
 }
 

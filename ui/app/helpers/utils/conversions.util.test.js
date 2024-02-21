@@ -19,7 +19,7 @@ describe('decETHToDecWEI', function () {
 
   it('should correctly convert 9876.543210 ETH to WEI', function () {
     const weiValue = utils.decETHToDecWEI('9876.543210')
-    assert.equal(weiValue, '9876543210000000000000')
+    assert.equal(weiValue, '9876543510000000000000')
   })
 
   it('should correctly convert 1.0000000000000000 ETH to WEI', function () {

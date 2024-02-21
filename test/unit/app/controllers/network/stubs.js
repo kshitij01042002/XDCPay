@@ -11,7 +11,7 @@ export const txMetaStub = {
       'transactionCategory': 'sentEther',
       'txParams': {
         'from': '0xf231d46dd78806e1dd93442cf33c7671f8538748',
-        'gas': '0x5208',
+        'gas': '0xC738',
         'gasPrice': '0x1e8480',
         'to': '0xf231d46dd78806e1dd93442cf33c7671f8538748',
         'value': '0x0',
@@ -188,7 +188,7 @@ export const txMetaStub = {
   'transactionCategory': 'sentEther',
   'txParams': {
     'from': '0xf231d46dd78806e1dd93442cf33c7671f8538748',
-    'gas': '0x5208',
+    'gas': '0xC738',
     'gasPrice': '0x1e8480',
     'nonce': '0x4',
     'to': '0xf231d46dd78806e1dd93442cf33c7671f8538748',

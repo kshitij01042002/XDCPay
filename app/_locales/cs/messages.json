@@ -175,7 +175,7 @@
     "message": "Limit paliva"
   },
   "gasLimitTooLow": {
-    "message": "Limit paliva musí být alespoň 21000"
+    "message": "Limit paliva musí být alespoň 51000"
   },
   "gasPrice": {
     "message": "Cena paliva (GWEI)"

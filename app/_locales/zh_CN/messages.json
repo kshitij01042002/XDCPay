@@ -449,7 +449,7 @@
     "message": "天然气限制即您个人希望购买的最大单位数量。"
   },
   "gasLimitTooLow": {
-    "message": "Gas Limit 至少要 21000"
+    "message": "Gas Limit 至少要 51000"
   },
   "gasUsed": {
     "message": "已使用天然气量"

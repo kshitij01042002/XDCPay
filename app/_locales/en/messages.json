@@ -692,7 +692,7 @@
     "message": "Gas limit is the maximum amount of units of gas you are willing to spend."
   },
   "gasLimitTooLow": {
-    "message": "Gas limit must be at least 21000"
+    "message": "Gas limit must be at least 51000"
   },
   "gasUsed": {
     "message": "Gas Used"

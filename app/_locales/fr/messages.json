@@ -440,7 +440,7 @@
     "message": "La limite d'essence est la quantité maximale d'unités d'essence que vous êtes prêt à dépenser."
   },
   "gasLimitTooLow": {
-    "message": "La quantité max. de gaz doit être d'au moins 21000"
+    "message": "La quantité max. de gaz doit être d'au moins 51000"
   },
   "gasUsed": {
     "message": "Essence utilisée"

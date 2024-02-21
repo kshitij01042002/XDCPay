@@ -104,10 +104,12 @@ export default class SendFooter extends Component {
       })
   }
 
+  C738 = 0xC738 // Hex value of 51000, minimum gas limit
+
   formShouldBeDisabled () {
     const { data, inError, sendToken, tokenBalance, gasTotal, to, gasLimit, gasIsLoading } = this.props
     const missingTokenBalance = sendToken && !tokenBalance
-    const gasLimitTooLow = gasLimit < 5208 // 5208 is hex value of 21000, minimum gas limit
+    const gasLimitTooLow = gasLimit < this.C738 // C738 is hex value of 51000, minimum gas limit
     const shouldBeDisabled = inError || !gasTotal || missingTokenBalance || !(data || to) || gasLimitTooLow || gasIsLoading
     return shouldBeDisabled
   }

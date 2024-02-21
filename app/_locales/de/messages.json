@@ -437,7 +437,7 @@
     "message": "Die Gasgrenze ist die Höchstmenge an Gaseinheiten, die Sie auszugeben bereit sind."
   },
   "gasLimitTooLow": {
-    "message": "Gaslimit muss mindestens 21000 betragen"
+    "message": "Gaslimit muss mindestens 51000 betragen"
   },
   "gasUsed": {
     "message": "Verwendetes Gas"

@@ -344,7 +344,7 @@ module.exports={
     "d": ""
   },
   "txGas": {
-    "v": 21000,
+    "v": 51000,
     "d": "Per transaction. NOTE: Not payable on data of calls between transactions."
   },
   "txCreation": {

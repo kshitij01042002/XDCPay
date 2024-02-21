@@ -448,7 +448,7 @@
     "message": "A gázkorlátozás az elkölthető gázegységek maximális mennyisége."
   },
   "gasLimitTooLow": {
-    "message": "A gáz határértéke legyen legalább 21000"
+    "message": "A gáz határértéke legyen legalább 51000"
   },
   "gasUsed": {
     "message": "Használt gáz"
