@@ -448,7 +448,7 @@
     "message": "Gasgrænse er den maksimale mængde gasenheder, du er villig til at bruge."
   },
   "gasLimitTooLow": {
-    "message": "Brændstofgrænsen skal være mindst 21000"
+    "message": "Brændstofgrænsen skal være mindst 51000"
   },
   "gasUsed": {
     "message": "Gas brugt"

@@ -448,7 +448,7 @@
     "message": "Gas robežvērtība ir maksimālais Gas vienību skaits, ko vēlaties tērēt."
   },
   "gasLimitTooLow": {
-    "message": "Minimālajai Gas robežvērtībai jābūt vismaz 21000"
+    "message": "Minimālajai Gas robežvērtībai jābūt vismaz 51000"
   },
   "gasUsed": {
     "message": "Izlietotie Gas"

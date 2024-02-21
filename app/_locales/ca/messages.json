@@ -445,7 +445,7 @@
     "message": "El límit de gas és la màxima quantitat d'unitats de gas que estàs disposat a gastar."
   },
   "gasLimitTooLow": {
-    "message": "El límit de gas ha de ser al menys 21000"
+    "message": "El límit de gas ha de ser al menys 51000"
   },
   "gasUsed": {
     "message": "Gas utilitzat"

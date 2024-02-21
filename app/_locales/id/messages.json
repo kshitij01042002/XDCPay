@@ -439,7 +439,7 @@
     "message": "Limit Bensin adalah jumlah maksimal satuan bensin yang Anda bersedia gunakan."
   },
   "gasLimitTooLow": {
-    "message": "Batas Gas harus paling tidak 21000"
+    "message": "Batas Gas harus paling tidak 51000"
   },
   "gasUsed": {
     "message": "Gas yang Digunakan"

@@ -130,7 +130,7 @@
     "message": "Hạn mức ga"
   },
   "gasLimitTooLow": {
-    "message": "Hạn mức ga phải đạt tối thiểu 21000"
+    "message": "Hạn mức ga phải đạt tối thiểu 51000"
   },
   "gasPrice": {
     "message": "Giá ga (GWEI)"

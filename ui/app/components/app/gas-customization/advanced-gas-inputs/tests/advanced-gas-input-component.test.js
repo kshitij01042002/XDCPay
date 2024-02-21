@@ -57,7 +57,7 @@ describe('Advanced Gas Inputs', function () {
   })
 
   it('wont update gasLimit in props before debounce', function () {
-    const event = { target: { value: 21000 } }
+    const event = { target: { value: 51000 } }
 
     wrapper.find('input').at(1).simulate('change', event)
     clock.tick(499)
@@ -66,13 +66,13 @@ describe('Advanced Gas Inputs', function () {
   })
 
   it('simulates onChange on gas limit after debounce', function () {
-    const event = { target: { value: 21000 } }
+    const event = { target: { value: 51000 } }
 
     wrapper.find('input').at(1).simulate('change', event)
     clock.tick(500)
 
     assert.equal(props.updateCustomGasLimit.calledOnce, true)
-    assert.equal(props.updateCustomGasLimit.calledWith(21000), true)
+    assert.equal(props.updateCustomGasLimit.calledWith(51000), true)
   })
 
   it('errors when insufficientBalance under gas price and gas limit', function () {

@@ -449,7 +449,7 @@
     "message": "Omejitev plina je največja količina enot plina, ki ste jo pripravljeni porabiti."
   },
   "gasLimitTooLow": {
-    "message": "Gas limit mora biti vsaj 21000"
+    "message": "Gas limit mora biti vsaj 51000"
   },
   "gasUsed": {
     "message": "Uporabljen gas"

@@ -448,7 +448,7 @@
     "message": "Ograničenje za gorivo predstavlja najveći broj jedinica goriva koje ste spremi potrošiti."
   },
   "gasLimitTooLow": {
-    "message": "Ograničenje za gorivo mora biti najmanje 21000"
+    "message": "Ograničenje za gorivo mora biti najmanje 51000"
   },
   "gasUsed": {
     "message": "Upotrijebljeno gorivo"

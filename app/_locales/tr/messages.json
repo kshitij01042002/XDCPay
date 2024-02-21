@@ -178,7 +178,7 @@
     "message": "Gas Limiti"
   },
   "gasLimitTooLow": {
-    "message": "Gas limiti en az 21000 olmalıdır"
+    "message": "Gas limiti en az 51000 olmalıdır"
   },
   "gasPrice": {
     "message": "Gas Fiyatı (GWEI)"

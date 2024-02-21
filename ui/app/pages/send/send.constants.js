@@ -3,7 +3,7 @@ import { conversionUtil, multiplyCurrencies } from '../../helpers/utils/conversi
 
 const MIN_GAS_PRICE_DEC = '0'
 const MIN_GAS_PRICE_HEX = (parseInt(MIN_GAS_PRICE_DEC, 10)).toString(16)
-const MIN_GAS_LIMIT_DEC = '21000'
+const MIN_GAS_LIMIT_DEC = '51000'
 const MIN_GAS_LIMIT_HEX = (parseInt(MIN_GAS_LIMIT_DEC, 10)).toString(16)
 
 const MIN_GAS_PRICE_GWEI = ethUtil.addHexPrefix(conversionUtil(MIN_GAS_PRICE_HEX, {
@@ -30,7 +30,7 @@ const INVALID_RECIPIENT_ADDRESS_NOT_ETH_NETWORK_ERROR = 'invalidAddressRecipient
 const REQUIRED_ERROR = 'required'
 const KNOWN_RECIPIENT_ADDRESS_ERROR = 'knownAddressRecipient'
 
-const SIMPLE_GAS_COST = '0x5208' // Hex for 21000, cost of a simple send.
+const SIMPLE_GAS_COST = '0xC738' // Hex for 51000, cost of a simple send.
 const BASE_TOKEN_GAS_COST = '0x186a0' // Hex for 100000, a base estimate for token transfers.
 
 export {

@@ -22,7 +22,7 @@ describe('TransactionActivityLog utils', function () {
                 'from': '0x50a9d56c2b8ba9a5c7f2c08c3d26e0499f23a706',
                 'to': '0xc5ae6383e126f901dcb06131d97a88745bfa88d6',
                 'value': '0x2386f26fc10000',
-                'gas': '0x5208',
+                'gas': '0xC738',
                 'gasPrice': '0x3b9aca00',
               },
               'type': 'standard',
@@ -39,7 +39,7 @@ describe('TransactionActivityLog utils', function () {
           time: 1543958845581,
           txParams: {
             from: '0x50a9d56c2b8ba9a5c7f2c08c3d26e0499f23a706',
-            gas: '0x5208',
+            gas: '0xC738',
             gasPrice: '0x3b9aca00',
             nonce: '0x32',
             to: '0xc5ae6383e126f901dcb06131d97a88745bfa88d6',
@@ -59,7 +59,7 @@ describe('TransactionActivityLog utils', function () {
                 'from': '0x50a9d56c2b8ba9a5c7f2c08c3d26e0499f23a706',
                 'to': '0xc5ae6383e126f901dcb06131d97a88745bfa88d6',
                 'value': '0x2386f26fc10000',
-                'gas': '0x5208',
+                'gas': '0xC738',
                 'gasPrice': '0x3b9aca00',
                 'nonce': '0x32',
               },
@@ -81,7 +81,7 @@ describe('TransactionActivityLog utils', function () {
           time: 1543958857697,
           txParams: {
             from: '0x50a9d56c2b8ba9a5c7f2c08c3d26e0499f23a706',
-            gas: '0x5208',
+            gas: '0xC738',
             gasPrice: '0x481f2280',
             nonce: '0x32',
             to: '0xc5ae6383e126f901dcb06131d97a88745bfa88d6',
@@ -134,7 +134,7 @@ describe('TransactionActivityLog utils', function () {
         status: 'confirmed',
         txParams: {
           from: '0x1',
-          gas: '0x5208',
+          gas: '0xC738',
           gasPrice: '0x3b9aca00',
           nonce: '0xa4',
           to: '0x2',
@@ -156,7 +156,7 @@ describe('TransactionActivityLog utils', function () {
             time: 1535507561452,
             txParams: {
               from: '0x1',
-              gas: '0x5208',
+              gas: '0xC738',
               gasPrice: '0x3b9aca00',
               nonce: '0xa4',
               to: '0x2',
@@ -282,7 +282,7 @@ describe('TransactionActivityLog utils', function () {
         status: 'confirmed',
         txParams: {
           from: '0x1',
-          gas: '0x5208',
+          gas: '0xC738',
           gasPrice: '0x3b9aca00',
           nonce: '0xa4',
           to: '0x2',

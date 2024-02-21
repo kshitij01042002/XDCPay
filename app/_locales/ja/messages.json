@@ -223,7 +223,7 @@
     "message": "ガスリミット"
   },
   "gasLimitTooLow": {
-    "message": "ガスリミットは最低21000です。"
+    "message": "ガスリミットは最低51000です。"
   },
   "gasPrice": {
     "message": "ガスプライス (GWEI)"

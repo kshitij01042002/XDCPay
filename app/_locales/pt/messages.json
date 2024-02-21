@@ -151,7 +151,7 @@
     "message": "Limite de Gas"
   },
   "gasLimitTooLow": {
-    "message": "Limite de Gas deve ser no mínimo 21000"
+    "message": "Limite de Gas deve ser no mínimo 51000"
   },
   "gasPrice": {
     "message": "Preço Gas (GWEI)"

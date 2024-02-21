@@ -62,7 +62,7 @@ export function getEstimatedGasTimes (state) {
 
 export function getAveragePriceEstimateInHexWEI (state) {
   const averagePriceEstimate = state.gas.basicEstimates.average
-  return getGasPriceInHexWei(averagePriceEstimate || '0x15')
+  return getGasPriceInHexWei(averagePriceEstimate || '0xF')
 }
 
 export function getFastPriceEstimateInHexWEI (state) {
@@ -252,7 +252,7 @@ export function getRenderableEstimateDataForSmallButtonsFromGWEI (state) {
   const { showFiatInTestnets } = getPreferences(state)
   const isMainnet = getIsMainnet(state)
   const showFiat = (isMainnet || Boolean(showFiatInTestnets))
-  const gasLimit = state.metamask.send.gasLimit || getCustomGasLimit(state) || '0x5208'
+  const gasLimit = state.metamask.send.gasLimit || getCustomGasLimit(state) || '0xC738'
   const { conversionRate } = state.metamask
   const currentCurrency = getCurrentCurrency(state)
   const {
