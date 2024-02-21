@@ -51,6 +51,11 @@ export function valuesFor (obj) {
     })
 }
 
+export function convert (address) {
+  const start = address?.slice(0, 2)
+  return start.toLowerCase() === '0x' ? (`xdc${address.substring(2)}`) : address
+}
+
 export function addressSummary (address, firstSegLength = 10, lastSegLength = 4, includeHex = true) {
   if (!address) {
     return ''
@@ -59,7 +64,7 @@ export function addressSummary (address, firstSegLength = 10, lastSegLength = 4,
   if (!includeHex) {
     checked = ethUtil.stripHexPrefix(checked)
   }
-  return checked ? `${checked.slice(0, firstSegLength)}...${checked.slice(checked.length - lastSegLength)}` : '...'
+  return convert(checked ? `${checked.slice(0, firstSegLength)}...${checked.slice(checked.length - lastSegLength)}` : '...')
 }
 
 export function isValidAddress (address) {

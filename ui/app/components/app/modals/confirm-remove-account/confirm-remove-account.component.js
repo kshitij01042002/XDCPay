@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Modal from '../../modal'
-import { addressSummary } from '../../../../helpers/utils/util'
+import { convert, addressSummary } from '../../../../helpers/utils/util'
 import Identicon from '../../../ui/identicon'
 import getAccountLink from '../../../../../lib/account-link'
 
@@ -47,7 +47,7 @@ export default class ConfirmRemoveAccount extends Component {
         <div className="confirm-remove-account__account__link">
           <a
             className=""
-            href={getAccountLink(identity.address, this.props.network)}
+            href={getAccountLink(convert(identity.address), this.props.network)}
             target="_blank"
             rel="noopener noreferrer"
             title={this.context.t('etherscanView')}
