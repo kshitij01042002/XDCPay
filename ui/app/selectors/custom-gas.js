@@ -62,7 +62,7 @@ export function getEstimatedGasTimes (state) {
 
 export function getAveragePriceEstimateInHexWEI (state) {
   const averagePriceEstimate = state.gas.basicEstimates.average
-  return getGasPriceInHexWei(averagePriceEstimate || '0x33')
+  return getGasPriceInHexWei(averagePriceEstimate || '0xF')
 }
 
 export function getFastPriceEstimateInHexWEI (state) {
