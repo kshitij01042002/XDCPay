@@ -54,37 +54,25 @@ export default class InfoTab extends PureComponent {
         </div>
         <hr className="info-tab__separator" />
         <div className="info-tab__link-item">
-          <Button
-            type="link"
-            href="https://support.metamask.io"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="info-tab__link-text"
-          >
-            { t('supportCenter') }
-          </Button>
+          <a href="https://www.xdc.dev/" target="_blank" rel="noopener noreferrer">
+            <Button type="link" className="info-tab__link-text">
+              { t('supportCenter') }
+            </Button>
+          </a>
         </div>
         <div className="info-tab__link-item">
-          <Button
-            type="link"
-            href="https://metamask.io/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="info-tab__link-text"
-          >
-            { t('visitWebSite') }
-          </Button>
+          <a href="https://xinfin.org/" target="_blank" rel="noopener noreferrer">
+            <Button type="link" className="info-tab__link-text">
+              { t('visitWebSite') }
+            </Button>
+          </a>
         </div>
         <div className="info-tab__link-item">
-          <Button
-            type="link"
-            href="https://metamask.zendesk.com/hc/en-us/requests/new"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="info-tab__link-text"
-          >
-            { t('contactUs') }
-          </Button>
+          <a href="https://xinfin.org/contact" target="_blank" rel="noopener noreferrer">
+            <Button type="link" className="info-tab__link-text">
+              { t('contactUs') }
+            </Button>
+          </a>
         </div>
       </div>
     )
