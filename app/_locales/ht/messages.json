@@ -387,7 +387,7 @@
     "message": "Ou dwe chwazi omwen 1 token."
   },
   "needEtherInWallet": {
-    "message": "Pou kominike avèk aplikasyon desantralize ou dwe itilize XDCPay, ou pral bezwen Ether nan Wallet ou."
+    "message": "Pou kominike avèk aplikasyon desantralize ou dwe itilize XDCPay, ou pral bezwen XDC nan Wallet ou."
   },
   "needImportFile": {
     "message": "Ou dwe chwazi yon dosye pou enpòte.",

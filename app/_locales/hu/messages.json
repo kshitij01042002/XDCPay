@@ -657,7 +657,7 @@
     "message": "Legalább 1 tokent ki kell választania."
   },
   "needEtherInWallet": {
-    "message": "Ha a MetaMaskon keresztül szeretne interakcióba lépni decentralizált alkalmazással, ahhoz a tárcájában Ethernek kell lennie."
+    "message": "Ha a MetaMaskon keresztül szeretne interakcióba lépni decentralizált alkalmazással, ahhoz a tárcájában XDCnek kell lennie."
   },
   "needImportFile": {
     "message": "Ki kell választania az importálni kívánt fájlt.",

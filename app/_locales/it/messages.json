@@ -936,7 +936,7 @@
     "message": "Devi selezionare almeno un token."
   },
   "needEtherInWallet": {
-    "message": "Per interagire con applicazioni decentralizzate con XDCPay, devi possedere Ether nel tuo portafoglio."
+    "message": "Per interagire con applicazioni decentralizzate con XDCPay, devi possedere XDC nel tuo portafoglio."
   },
   "needImportFile": {
     "message": "Devi selezionare un file da importare.",

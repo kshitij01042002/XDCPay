@@ -198,7 +198,7 @@
     "message": "Tài khoản của tôi"
   },
   "needEtherInWallet": {
-    "message": "Để tương tác với các ứng dụng phân tán bằng XDCPay, bạn sẽ phải cần có Ether trong ví của bạn."
+    "message": "Để tương tác với các ứng dụng phân tán bằng XDCPay, bạn sẽ phải cần có XDC trong ví của bạn."
   },
   "needImportFile": {
     "message": "Bạn phải chọn một tập tin để nhập.",

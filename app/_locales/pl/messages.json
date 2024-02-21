@@ -658,7 +658,7 @@
     "message": "Należy wybrać co najmniej 1 token."
   },
   "needEtherInWallet": {
-    "message": "Żeby skorzystać ze zdecentraliowanych aplikacji (dApps) przy pomocy XDCPay, potrzebujesz Eteru w swoim portfelu."
+    "message": "Żeby skorzystać ze zdecentraliowanych aplikacji (dApps) przy pomocy XDCPay, potrzebujesz XDC w swoim portfelu."
   },
   "needImportFile": {
     "message": "Musisz wybrać plik do zaimportowania.",

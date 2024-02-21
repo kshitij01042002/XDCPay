@@ -31,6 +31,7 @@ export default class TokenRatesController {
     const start = address?.slice(0, 2)
     return start.toLowerCase() === '0x' ? (`xdc${address.substring(2)}`) : address
   }
+
   /**
    * Updates exchange rates for all tokens
    */
@@ -44,8 +45,10 @@ export default class TokenRatesController {
       try {
         const response = await window.fetch(`https://api.coingecko.com/api/v3/simple/token_price/xdc-network?${query}`)
         const prices = await response.json()
+        console.log(prices)
         this._tokens.forEach((token) => {
           const price = prices[token.address.toLowerCase()] || prices[this.convert(token.address.toLowerCase(), 'xdc')] || prices[ethUtil.toChecksumAddress(token.address)]
+          console.log(price)
           contractExchangeRates[normalizeAddress(token.address)] = price ? price[nativeCurrency] : 0
         })
       } catch (error) {

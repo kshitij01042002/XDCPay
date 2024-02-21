@@ -648,7 +648,7 @@
     "message": "Minst 1 token måste väljas."
   },
   "needEtherInWallet": {
-    "message": "För att interagera med decentraliserade applikationer med XDCPay behöver du Ether i din plånbok."
+    "message": "För att interagera med decentraliserade applikationer med XDCPay behöver du XDC i din plånbok."
   },
   "needImportFile": {
     "message": "Du måste välja en fil att importera.",

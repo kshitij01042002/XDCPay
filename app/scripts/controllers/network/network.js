@@ -19,7 +19,7 @@ import {
   INFURA_PROVIDER_TYPES,
   RPC_PROVIDER_TYPES,
   XDC_DISPLAY_NAME,
-  XDC_APOTHEM_DISPLAY_NAME
+  XDC_APOTHEM_DISPLAY_NAME,
 } from './enums'
 
 const networks = { networkList: {} }

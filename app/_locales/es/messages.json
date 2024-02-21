@@ -531,7 +531,7 @@
     "message": "Debe seleccionar al menos un (1) token"
   },
   "needEtherInWallet": {
-    "message": "Para interactuar con una aplicación descentralizada usando XDCPay, necesitas tener Ether en tu billetera"
+    "message": "Para interactuar con una aplicación descentralizada usando XDCPay, necesitas tener XDC en tu billetera"
   },
   "needImportFile": {
     "message": "Debes seleccionar un archivo para importar",

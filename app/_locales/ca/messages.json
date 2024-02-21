@@ -648,7 +648,7 @@
     "message": "Has de seleccionar "
   },
   "needEtherInWallet": {
-    "message": "Per a interactuar amb aplicacions descentralitzades fent servir XDCPay, necessitaràs Ether al teu moneder."
+    "message": "Per a interactuar amb aplicacions descentralitzades fent servir XDCPay, necessitaràs XDC al teu moneder."
   },
   "needImportFile": {
     "message": "Has de seleccionar un arxiu per a importar.",

@@ -651,7 +651,7 @@
     "message": "Trebuie să selectați cel puțin 1 simbol."
   },
   "needEtherInWallet": {
-    "message": "Pentru a interacționa cu aplicațiile descentralizate prin intermediul XDCPay, trebuie să aveți Ether în portofel."
+    "message": "Pentru a interacționa cu aplicațiile descentralizate prin intermediul XDCPay, trebuie să aveți XDC în portofel."
   },
   "needImportFile": {
     "message": "Trebuie să selectați un fișier pentru importare.",

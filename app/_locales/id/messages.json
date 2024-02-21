@@ -645,7 +645,7 @@
     "message": "Harus memilih setidaknya 1 token."
   },
   "needEtherInWallet": {
-    "message": "Untuk berinteraksi dengan aplikasi terdesentralisasi menggunakan XDCPay, Anda memerlukan adanya Ether di dompet Anda."
+    "message": "Untuk berinteraksi dengan aplikasi terdesentralisasi menggunakan XDCPay, Anda memerlukan adanya XDC di dompet Anda."
   },
   "needImportFile": {
     "message": "Anda harus memilih berkas untuk diimpor.",

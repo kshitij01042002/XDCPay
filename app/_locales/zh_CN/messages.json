@@ -649,7 +649,7 @@
     "message": "至少选择一种代币."
   },
   "needEtherInWallet": {
-    "message": "使用 XDCPay 与 DAPP 交互，需要你的钱包里有 Ether。"
+    "message": "使用 XDCPay 与 DAPP 交互，需要你的钱包里有 XDC。"
   },
   "needImportFile": {
     "message": "必须选择导入一个文件。",
